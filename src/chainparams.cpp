@@ -142,8 +142,8 @@ public:
         assert(genesis.hashMerkleRoot == uint256S(HASH_MERKLE_ROOT));
 
         vSeeds.clear();
-        vSeeds.push_back(CDNSSeedData("dnsseed1.gincoin.sdev", "dnsseed1.gincoin.sdev"));
-        vSeeds.push_back(CDNSSeedData("dnsseed2.gincoin.sdev", "dnsseed2.gincoin.sdev"));
+        vSeeds.push_back(CDNSSeedData("dnsseed1.gtmcoin.sdev", "dnsseed1.gincoin.sdev"));
+        vSeeds.push_back(CDNSSeedData("dnsseed2.gtmcoin.sdev", "dnsseed2.gincoin.sdev"));
 
         // Dash addresses start with 'G'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,38);
