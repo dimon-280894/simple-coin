@@ -720,7 +720,7 @@ UniValue getblocktemplate(const UniValue& params, bool fHelp)
         founderPaymentObj.push_back(Pair("founderpayee", Params().FounderAddress().c_str()));
         founderPaymentObj.push_back(Pair("amount", founderPayment));
         result.push_back(Pair("founderreward", founderPaymentObj));
-        rsult.push_back(Pair("founder_reward_enforced", true));
+        result.push_back(Pair("founder_reward_enforced", true));
     }
 
     UniValue masternodeObj(UniValue::VOBJ);
