@@ -7,6 +7,7 @@
 #include "validation.h"
 
 #include "alert.h"
+#include "base58.h"
 #include "arith_uint256.h"
 #include "chainparams.h"
 #include "checkpoints.h"
