@@ -715,7 +715,7 @@ UniValue getblocktemplate(const UniValue& params, bool fHelp)
     result.push_back(Pair("height", (int64_t)(pindexPrev->nHeight+1)));
 
     CAmount founderPayment = GetFounderPayment(pindexPrev->nHeight+1);
-    if (founderRfounderPaymenteward > 0) {
+    if (founderPayment > 0) {
         UniValue founderPaymentObj(UniValue::VOBJ);
         founderPaymentObj.push_back(Pair("founderpayee", Params().FounderAddress().c_str()));
         founderPaymentObj.push_back(Pair("amount", founderPayment));
