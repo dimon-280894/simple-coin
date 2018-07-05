@@ -17,34 +17,35 @@
 ///   ALTCOIN SETTINGS  ///
 ///////////////////////////
 
-static const int64_t SINGLE_BLOCK_REWARD = 50;
-static const int64_t PREMINE_REWARD = 50000;
+static const int64_t SINGLE_BLOCK_REWARD = 21;
+static const int64_t PREMINE_REWARD = SINGLE_BLOCK_REWARD * 1000;
+static const int64_t FOUNDER_REWARD = 1;
 static const char* PSZ_TIMESTAMP = "July 5, 2018 Your roof is running away from you... x_0";
 static const char* PUBLIC_KEY = "04b41de5b1633fbb8c3f08b8f2c8e109e2e95b6e6cc9f898c4f7033fc0d1e27f2f25ac909c301a3e4e4cf07eeaa01a8f1399577c2d0c350db4b4a61d40b7f3bd2b";
 static const char* HASH_MERKLE_ROOT = "0x6720b98383eda318c6d24701523745707a159d94803689fd8489af592549fc3e";
 
 // MAIN
-static const char* MAIN_GENESIS = "0x00000DF0C2065D49FC93A784BAA30503E29E43D011227B655EA2DAA8B939E588";
-static const int MAIN_TIMESTAMP = 1530703800;
-static const int MAIN_NONCE = 429641;
+static const char* MAIN_GENESIS = "0x00000B03C7C823948AAD13A6D5CD9071CB143E02C716CF5AA77D98EC6A44D49C";
+static const int MAIN_TIMESTAMP = 1530799200;
+static const int MAIN_NONCE = 144714;
 static const int MAIN_BITS = 0x1e0ffff0;
 static const int MAIN_VERSION = 1;
 static const char* MAIN_ALERT_PUB_KEY = "04831983ff9f4b1ce1d940a4414fcc7ec6ee9da4bad48b3476ea504ecb873ca1b3d9132ed90b9a2b1c9fe4b38b6e5b274163d4f0b3f02f8a73e34d8c5aa3054370";
 static const char* MAIN_SPORK_PUB_KEY = "043ea141133aec5be74be221ac9dad7f672ead28774ef38edeb464e6849ee4eb1ebfae4b543bd43ad9e3f7db186c63830a86faf96f7c8bdfdaadb298192743d349";
 
 // TESTNET
-static const char* TEST_GENESIS = "0x000008D13AEA0EE7B2D8BFBEBE5AF024E54B00D84C6E40EFABB53CA4319F8838";
-static const int TEST_TIMESTAMP = 1530703801;
-static const int TEST_NONCE = 2207374;
+static const char* TEST_GENESIS = "0x00000488BB7E55E3B0E1C8C8BC306A96891829BF8C608EB10C9A355D363529E6";
+static const int TEST_TIMESTAMP = 1530799201;
+static const int TEST_NONCE = 996982;
 static const int TEST_BITS = 0x1e0ffff0;
 static const int TEST_VERSION = 1;
 static const char* TEST_ALERT_PUB_KEY = "04fbb84ca0f71ae10ce9c80b1b5c0e806c5fcb99a0949e9abb8337d3341ea338de9a23babc2f2d555f077858f60179cfed1907d4563ce62d74768e7e3b367cec85";
 static const char* TEST_SPORK_PUB_KEY = "04d7e900253a75a6e9ed831694dd5538f2791c334b5b2578f5c03904053c9a93737acd2b917afd9a93ea276a61a5fec16292553e1273765c358923c9d390fbd806";
 
 // REGTESTNET
-static const char* REGTEST_GENESIS = "0x0000069EFA99186BE60DA7F3015898E6E65D8726203F6ED2CA2E72AF0ABCD27A";
-static const int REGTEST_TIMESTAMP = 1530703802;
-static const int REGTEST_NONCE = 500862;
+static const char* REGTEST_GENESIS = "0x0000082976B30BB10B504EEEBFC61D11E8C4F943BBE8BD4B6E61D13C8D73BFCD";
+static const int REGTEST_TIMESTAMP = 1530799202;
+static const int REGTEST_NONCE = 45994;
 static const  int REGTEST_BITS = 0x1e0ffff0;
 static const int REGTEST_VERSION = 1;
 static const char* REGTEST_ALERT_PUB_KEY = "04831983ff9f4b1ce1d940a4414fcc7ec6ee9da4bad48b3476ea504ecb873ca1b3d9132ed90b9a2b1c9fe4b38b6e5b274163d4f0b3f02f8a73e34d8c5aa3054370";
@@ -122,6 +123,7 @@ public:
     int PoolMaxTransactions() const { return nPoolMaxTransactions; }
     int FulfilledRequestExpireTime() const { return nFulfilledRequestExpireTime; }
     std::string SporkPubKey() const { return strSporkPubKey; }
+    std::string FounderAddress() const { return founderAddress; }
 protected:
     CChainParams() {}
 
@@ -149,6 +151,7 @@ protected:
     int nFulfilledRequestExpireTime;
     std::string strSporkPubKey;
     std::string strMasternodePaymentsPubKey;
+    std::string founderAddress;
 };
 
 /**

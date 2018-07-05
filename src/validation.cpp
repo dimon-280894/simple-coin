@@ -1229,12 +1229,21 @@ CAmount GetBlockSubsidy(int nPrevBits, int nPrevHeight, const Consensus::Params&
         return PREMINE_REWARD * COIN;
     }
 
-    return (SINGLE_BLOCK_REWARD * COIN) >> (nPrevHeight / consensusParams.nSubsidyHalvingInterval);
+
+    if(nPrevBits <= consensusParams.nSubsidyHalvingInterval){
+        return  (SINGLE_BLOCK_REWARD * COIN);
+    }
+
+    return ((SINGLE_BLOCK_REWARD * COIN) >> 1) + FOUNDER_REWARD;
 }
 
 CAmount GetMasternodePayment(int nHeight, CAmount blockValue)
 {
-    return blockValue / 2;
+    return (blockValue - FOUNDER_REWARD) / 2;
+}
+
+CAmount GetFounderPayment(int nHeight){
+    return FOUNDER_REWARD;
 }
 
 bool IsInitialBlockDownload()
@@ -2177,6 +2186,26 @@ static bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockInd
                                 REJECT_INVALID, "bad-cb-payee");
     }
     // END DASH
+
+    // GTM
+    CAmount founderPayment = GetFounderPayment(pindex->nHeight);
+    if (founderPayment > 0) {
+        CScript FOUNDER_SCRIPT = GetScriptForDestination(CBitcoinAddress(Params().FounderAddress()).Get());
+        bool FounderPaid = false;
+        const CTransaction& tx = block.vtx[0];
+
+        BOOST_FOREACH (const CTxOut& output, tx.vout) {
+            if (output.scriptPubKey == FOUNDER_SCRIPT && output.nValue == founderPayment) {
+                FounderPaid = true;
+                break;
+            }
+        }
+        if (!FounderPaid) {
+            return state.DoS(0, error("ConnectBlock(INFINEX): no founder reward"), REJECT_INVALID, "no-founder-reward");
+        }
+    }
+
+    // END GTM
 
     if (!control.Wait())
         return state.DoS(100, false);

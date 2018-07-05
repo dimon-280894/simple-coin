@@ -160,7 +160,7 @@ public:
         nExtCoinType = 5;
 
         vFixedSeeds.clear();
-        vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_main, pnSeed6_main + ARRAYLEN(pnSeed6_main));
+        //vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_main, pnSeed6_main + ARRAYLEN(pnSeed6_main));
 
         fMiningRequiresPeers = true;
         fDefaultConsistencyChecks = false;
@@ -180,6 +180,8 @@ public:
                         //   (the tx=... number in the SetBestChain debug.log lines)
             5000        // * estimated number of transactions per day after checkpoint
         };
+
+        founderAddress = "GZYFJs8tLpWiGDiddbkVUAUfb8XswSgoiK";
     }
 };
 static CMainParams mainParams;
@@ -295,6 +297,7 @@ public:
             500         // * estimated number of transactions per day after checkpoint
         };
 
+        founderAddress = "GZYFJs8tLpWiGDiddbkVUAUfb8XswSgoiK";
     }
 };
 static CTestNetParams testNetParams;
@@ -395,6 +398,8 @@ public:
 
         // Regtest Dash BIP44 coin type is '1' (All coin's testnet default)
         nExtCoinType = 1;
+
+        founderAddress = "GZYFJs8tLpWiGDiddbkVUAUfb8XswSgoiK";
    }
 };
 static CRegTestParams regTestParams;

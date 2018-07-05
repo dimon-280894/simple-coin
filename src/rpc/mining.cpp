@@ -714,6 +714,15 @@ UniValue getblocktemplate(const UniValue& params, bool fHelp)
     result.push_back(Pair("bits", strprintf("%08x", pblock->nBits)));
     result.push_back(Pair("height", (int64_t)(pindexPrev->nHeight+1)));
 
+    CAmount founderPayment = GetFounderPayment(pindexPrev->nHeight+1);
+    if (founderRfounderPaymenteward > 0) {
+        UniValue founderPaymentObj(UniValue::VOBJ);
+        founderPaymentObj.push_back(Pair("founderpayee", Params().FounderAddress().c_str()));
+        founderPaymentObj.push_back(Pair("amount", founderPayment));
+        result.push_back(Pair("founderreward", founderPaymentObj));
+        rsult.push_back(Pair("founder_reward_enforced", true));
+    }
+
     UniValue masternodeObj(UniValue::VOBJ);
     if(pblock->txoutMasternode != CTxOut()) {
         CTxDestination address1;

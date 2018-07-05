@@ -289,6 +289,13 @@ CBlockTemplate* CreateNewBlock(const CChainParams& chainparams, const CScript& s
         txNew.vout[0].nValue = blockReward;
         txNew.vin[0].scriptSig = CScript() << nHeight << OP_0;
 
+        CAmount founderPayment = GetFounderPayment(nHeight);
+        if (founderPayment > 0) {
+            CScript FOUNDER_SCRIPT = GetScriptForDestination(CBitcoinAddress(Params().FounderAddress()).Get());
+            txNew.vout[0].nValue -= founderPayment;
+            txNew.vout.push_back(CTxOut(founderPayment, CScript(FOUNDER_SCRIPT.begin(), FOUNDER_SCRIPT.end())));
+        }
+
         // Update coinbase transaction with additional info about masternode and governance payments,
         // get some info back to pass to getblocktemplate
         FillBlockPayments(txNew, nHeight, blockReward, pblock->txoutMasternode, pblock->voutSuperblock);
