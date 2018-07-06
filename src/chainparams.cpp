@@ -92,7 +92,7 @@ public:
         consensus.BIP34Hash = uint256S(MAIN_GENESIS);
         consensus.powLimit = uint256S("00000fffff000000000000000000000000000000000000000000000000000000");
         consensus.nPowTargetTimespan = 24 * 60 * 60; // Dash: 1 day
-        consensus.nPowTargetSpacing = 2.5 * 60; // Dash: 2.5 minutes
+        consensus.nPowTargetSpacing = 2 * 60; // Dash: 2.5 minutes
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
         consensus.nPowKGWHeight = 15200;
@@ -138,6 +138,17 @@ public:
 
         genesis = CreateGenesisBlock(MAIN_TIMESTAMP, MAIN_NONCE, MAIN_BITS, MAIN_VERSION, SINGLE_BLOCK_REWARD * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
+
+        FILE *genesisFile = fopen("genesis.txt", "w");
+        fprintf(genesisFile, "needle: %s\n", consensus.hashGenesisBlock.GetHex().c_str());
+        fprintf(genesisFile, "having: %s\n", MAIN_GENESIS);
+        fclose(genesisFile);
+
+        FILE *merkleFile = fopen("merkle.txt", "w");
+        fprintf(merkleFile, "needle: %s\n", genesis.hashMerkleRoot.GetHex().c_str());
+        fprintf(merkleFile, "having: %s\n", HASH_MERKLE_ROOT);
+        fclose(merkleFile);
+
         assert(consensus.hashGenesisBlock == uint256S(MAIN_GENESIS));
         assert(genesis.hashMerkleRoot == uint256S(HASH_MERKLE_ROOT));
 
@@ -193,7 +204,7 @@ class CTestNetParams : public CChainParams {
 public:
     CTestNetParams() {
         strNetworkID = "test";
-        consensus.nSubsidyHalvingInterval = 210240;
+        consensus.nSubsidyHalvingInterval = 150;
         consensus.nMasternodePaymentsStartBlock = 4010; // not true, but it's ok as long as it's less then nMasternodePaymentsIncreaseBlock
         consensus.nMasternodePaymentsIncreaseBlock = 4030;
         consensus.nMasternodePaymentsIncreasePeriod = 10;
@@ -214,11 +225,11 @@ public:
         consensus.BIP34Hash = uint256S(TEST_GENESIS);
         consensus.powLimit = uint256S("00000fffff000000000000000000000000000000000000000000000000000000");
         consensus.nPowTargetTimespan = 24 * 60 * 60; // Dash: 1 day
-        consensus.nPowTargetSpacing = 2.5 * 60; // Dash: 2.5 minutes
+        consensus.nPowTargetSpacing = 2 * 60; // Dash: 2.5 minutes
         consensus.fPowAllowMinDifficultyBlocks = true;
         consensus.fPowNoRetargeting = false;
         consensus.nPowKGWHeight = 4001; // nPowKGWHeight >= nPowDGWHeight means "no KGW"
-        consensus.nPowDGWHeight = 4001;
+        consensus.nPowDGWHeight = 10;
         consensus.nRuleChangeActivationThreshold = 1512; // 75% for testchains
         consensus.nMinerConfirmationWindow = 2016; // nPowTargetTimespan / nPowTargetSpacing
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].bit = 28;
