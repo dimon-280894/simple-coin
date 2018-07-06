@@ -1226,7 +1226,7 @@ double ConvertBitsToDouble(unsigned int nBits)
 
 CAmount GetBlockSubsidy(int nPrevBits, int nPrevHeight, const Consensus::Params& consensusParams, bool fSuperblockPartOnly)
 {
-    if(nPrevHeight < 1){
+    if(nPrevHeight <= 1){
         return PREMINE_REWARD * COIN;
     }
 
@@ -1235,12 +1235,21 @@ CAmount GetBlockSubsidy(int nPrevBits, int nPrevHeight, const Consensus::Params&
         return  (SINGLE_BLOCK_REWARD * COIN);
     }
 
-    return ((SINGLE_BLOCK_REWARD * COIN) >> 1) + FOUNDER_REWARD;
+    return ((SINGLE_BLOCK_REWARD) >> 1) + FOUNDER_REWARD;
 }
 
 CAmount GetMasternodePayment(int nHeight, CAmount blockValue)
 {
-    return (blockValue / 2) * COIN;
+    FILE *paymentFile = fopen("payment.txt", "a");
+    fprintf(paymentFile, "nHeight: %d\n", nHeight);
+    fprintf(paymentFile, "blockValue: %d\n", blockValue);
+    fclose(paymentFile);
+
+    if(nHeight > 1) {
+        return ((blockValue - FOUNDER_REWARD) / 2) * COIN;
+    }
+
+    return 0;
 }
 
 CAmount GetFounderPayment(int nHeight){
