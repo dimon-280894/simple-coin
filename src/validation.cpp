@@ -1226,7 +1226,7 @@ double ConvertBitsToDouble(unsigned int nBits)
 
 CAmount GetBlockSubsidy(int nPrevBits, int nPrevHeight, const Consensus::Params& consensusParams, bool fSuperblockPartOnly)
 {
-    if(nPrevHeight <= 1){
+    if(nPrevHeight < 1){
         return PREMINE_REWARD * COIN;
     }
 
