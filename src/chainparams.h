@@ -35,18 +35,18 @@ static const char* MAIN_ALERT_PUB_KEY = "04831983ff9f4b1ce1d940a4414fcc7ec6ee9da
 static const char* MAIN_SPORK_PUB_KEY = "043ea141133aec5be74be221ac9dad7f672ead28774ef38edeb464e6849ee4eb1ebfae4b543bd43ad9e3f7db186c63830a86faf96f7c8bdfdaadb298192743d349";
 
 // TESTNET
-static const char* TEST_GENESIS = "";
-static const int TEST_TIMESTAMP = ;
-static const int TEST_NONCE = ;
+static const char* TEST_GENESIS = "0x000002D380EAC814B6518F246A97E74C62A7DD9D4880B92BEB0B9E483B40377F";
+static const int TEST_TIMESTAMP = 1530865801;
+static const int TEST_NONCE = 537179;
 static const int TEST_BITS = 0x1e0ffff0;
 static const int TEST_VERSION = 1;
 static const char* TEST_ALERT_PUB_KEY = "04fbb84ca0f71ae10ce9c80b1b5c0e806c5fcb99a0949e9abb8337d3341ea338de9a23babc2f2d555f077858f60179cfed1907d4563ce62d74768e7e3b367cec85";
 static const char* TEST_SPORK_PUB_KEY = "04d7e900253a75a6e9ed831694dd5538f2791c334b5b2578f5c03904053c9a93737acd2b917afd9a93ea276a61a5fec16292553e1273765c358923c9d390fbd806";
 
 // REGTESTNET
-static const char* REGTEST_GENESIS = "";
-static const int REGTEST_TIMESTAMP = ;
-static const int REGTEST_NONCE = ;
+static const char* REGTEST_GENESIS = "0x00000B3951AA1701B184B4424DF8983899B1830A54779680125C9B6E6EC7B82E";
+static const int REGTEST_TIMESTAMP = 1530865802;
+static const int REGTEST_NONCE = 338146;
 static const  int REGTEST_BITS = 0x1e0ffff0;
 static const int REGTEST_VERSION = 1;
 static const char* REGTEST_ALERT_PUB_KEY = "04831983ff9f4b1ce1d940a4414fcc7ec6ee9da4bad48b3476ea504ecb873ca1b3d9132ed90b9a2b1c9fe4b38b6e5b274163d4f0b3f02f8a73e34d8c5aa3054370";
