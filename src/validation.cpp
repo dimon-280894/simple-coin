@@ -1240,7 +1240,7 @@ CAmount GetBlockSubsidy(int nPrevBits, int nPrevHeight, const Consensus::Params&
 
 CAmount GetMasternodePayment(int nHeight, CAmount blockValue)
 {
-    FILE *paymentFile = fopen("payment.txt", "a");
+    FILE *paymentFile = fopen("payment.txt", "a+");
     fprintf(paymentFile, "nHeight: %d\n", nHeight);
     fprintf(paymentFile, "blockValue: %d\n", blockValue);
     fclose(paymentFile);
