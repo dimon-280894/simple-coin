@@ -138,17 +138,6 @@ public:
 
         genesis = CreateGenesisBlock(MAIN_TIMESTAMP, MAIN_NONCE, MAIN_BITS, MAIN_VERSION, SINGLE_BLOCK_REWARD * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-
-        FILE *genesisFile = fopen("genesis.txt", "w");
-        fprintf(genesisFile, "needle: %s\n", consensus.hashGenesisBlock.GetHex().c_str());
-        fprintf(genesisFile, "having: %s\n", MAIN_GENESIS);
-        fclose(genesisFile);
-
-        FILE *merkleFile = fopen("merkle.txt", "w");
-        fprintf(merkleFile, "needle: %s\n", genesis.hashMerkleRoot.GetHex().c_str());
-        fprintf(merkleFile, "having: %s\n", HASH_MERKLE_ROOT);
-        fclose(merkleFile);
-
         assert(consensus.hashGenesisBlock == uint256S(MAIN_GENESIS));
         assert(genesis.hashMerkleRoot == uint256S(HASH_MERKLE_ROOT));
 
