@@ -4,11 +4,11 @@ Sample init scripts and service configuration for dashd
 Sample scripts and configuration files for systemd, Upstart and OpenRC
 can be found in the contrib/init folder.
 
-    contrib/init/gtmcoind.service:    systemd service unit configuration
-    contrib/init/gtmcoind.openrc:     OpenRC compatible SysV style init script
-    contrib/init/gtmcoind.openrcconf: OpenRC conf.d file
-    contrib/init/gtmcoind.conf:       Upstart service configuration file
-    contrib/init/gtmcoind.init:       CentOS compatible SysV style init script
+    contrib/init/dashd.service:    systemd service unit configuration
+    contrib/init/dashd.openrc:     OpenRC compatible SysV style init script
+    contrib/init/dashd.openrcconf: OpenRC conf.d file
+    contrib/init/dashd.conf:       Upstart service configuration file
+    contrib/init/dashd.init:       CentOS compatible SysV style init script
 
 1. Service User
 ---------------------------------
@@ -44,7 +44,7 @@ This allows for running dashd without having to do any manual configuration.
 relative to the data directory. `wallet` *only* supports relative paths.
 
 For an example configuration file that describes the configuration settings,
-see `contrib/debian/examples/gtmcoin.conf`.
+see `contrib/debian/examples/dash.conf`.
 
 3. Paths
 ---------------------------------
@@ -54,7 +54,7 @@ see `contrib/debian/examples/gtmcoin.conf`.
 All three configurations assume several paths that might need to be adjusted.
 
 Binary:              `/usr/bin/dashd`  
-Configuration file:  `/etc/dashcore/gtmcoin.conf`  
+Configuration file:  `/etc/dashcore/dash.conf`  
 Data directory:      `/var/lib/dashd`  
 PID file:            `/var/run/dashd/dashd.pid` (OpenRC and Upstart) or `/var/lib/dashd/dashd.pid` (systemd)  
 Lock file:           `/var/lock/subsys/dashd` (CentOS)  
@@ -68,7 +68,7 @@ can then be controlled by group membership.
 3b) Mac OS X
 
 Binary:              `/usr/local/bin/dashd`  
-Configuration file:  `~/Library/Application Support/DashCore/gtmcoin.conf`  
+Configuration file:  `~/Library/Application Support/DashCore/dash.conf`  
 Data directory:      `~/Library/Application Support/DashCore`
 Lock file:           `~/Library/Application Support/DashCore/.lock`
 
@@ -86,14 +86,14 @@ To test, run `systemctl start dashd` and to enable for system startup run
 
 4b) OpenRC
 
-Rename gtmcoind.openrc to dashd and drop it in /etc/init.d.  Double
+Rename dashd.openrc to dashd and drop it in /etc/init.d.  Double
 check ownership and permissions and make it executable.  Test it with
 `/etc/init.d/dashd start` and configure it to run on startup with
 `rc-update add dashd`
 
 4c) Upstart (for Debian/Ubuntu based distributions)
 
-Drop gtmcoind.conf in /etc/init.  Test by running `service dashd start`
+Drop dashd.conf in /etc/init.  Test by running `service dashd start`
 it will automatically start on reboot.
 
 NOTE: This script is incompatible with CentOS 5 and Amazon Linux 2014 as they
@@ -101,7 +101,7 @@ use old versions of Upstart and do not supply the start-stop-daemon utility.
 
 4d) CentOS
 
-Copy gtmcoind.init to /etc/init.d/dashd. Test by running `service dashd start`.
+Copy dashd.init to /etc/init.d/dashd. Test by running `service dashd start`.
 
 Using this script, you can adjust the path and flags to the dashd program by
 setting the DASHD and FLAGS environment variables in the file
@@ -109,13 +109,13 @@ setting the DASHD and FLAGS environment variables in the file
 
 4e) Mac OS X
 
-Copy io.gtmcoin.gtmcoind.plist into ~/Library/LaunchAgents. Load the launch agent by
-running `launchctl load ~/Library/LaunchAgents/io.gtmcoin.gtmcoind.plist`.
+Copy org.dash.dashd.plist into ~/Library/LaunchAgents. Load the launch agent by
+running `launchctl load ~/Library/LaunchAgents/org.dash.dashd.plist`.
 
 This Launch Agent will cause dashd to start whenever the user logs in.
 
 NOTE: This approach is intended for those wanting to run dashd as the current user.
-You will need to modify io.gtmcoin.gtmcoind.plist if you intend to use it as a
+You will need to modify org.dash.dashd.plist if you intend to use it as a
 Launch Daemon with a dedicated dashcore user.
 
 5. Auto-respawn

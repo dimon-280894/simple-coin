@@ -114,7 +114,7 @@ namespace GUIUtil
     // Open debug.log
     void openDebugLogfile();
 	
-    // Open gtmcoin.conf
+    // Open dash.conf
     void openConfigfile();	
 
     // Open masternode.conf

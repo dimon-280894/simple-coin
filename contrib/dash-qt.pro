@@ -20,4 +20,4 @@ FORMS += \
     ../src/qt/forms/transactiondescdialog.ui
 
 RESOURCES += \
-    ../src/qt/gtmcoin.qrc
+    ../src/qt/dash.qrc

@@ -12,10 +12,10 @@
 #include "script/sign.h"
 #include "util.h"
 #include "utilstrencodings.h"
-#include "test/test_gtmcoin.h"
+#include "test/test_dash.h"
 
 #if defined(HAVE_CONSENSUS_LIB)
-#include "script/gtmcoinconsensus.h"
+#include "script/dashconsensus.h"
 #endif
 
 #include <fstream>

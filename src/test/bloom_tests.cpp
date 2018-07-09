@@ -14,7 +14,7 @@
 #include "uint256.h"
 #include "util.h"
 #include "utilstrencodings.h"
-#include "test/test_gtmcoin.h"
+#include "test/test_dash.h"
 
 #include <vector>
 

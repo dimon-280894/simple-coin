@@ -14,15 +14,15 @@ See the [Transifex Dash project](https://www.transifex.com/projects/p/dash/) to 
 We use automated scripts to help extract translations in both Qt, and non-Qt source files. It is rarely necessary to manually edit the files in `src/qt/locale/`. The translation source files must adhere to the following format:
 `dash_xx_YY.ts or dash_xx.ts`
 
-`src/qt/locale/gtmcoin_en.ts` is treated in a special way. It is used as the source for all other translations. Whenever a string in the source code is changed, this file must be updated to reflect those changes. A custom script is used to extract strings from the non-Qt parts. This script makes use of `gettext`, so make sure that utility is installed (ie, `apt-get install gettext` on Ubuntu/Debian). Once this has been updated, `lupdate` (included in the Qt SDK) is used to update `gtmcoin_en.ts`.
+`src/qt/locale/dash_en.ts` is treated in a special way. It is used as the source for all other translations. Whenever a string in the source code is changed, this file must be updated to reflect those changes. A custom script is used to extract strings from the non-Qt parts. This script makes use of `gettext`, so make sure that utility is installed (ie, `apt-get install gettext` on Ubuntu/Debian). Once this has been updated, `lupdate` (included in the Qt SDK) is used to update `dash_en.ts`.
 
-To automatically regenerate the `gtmcoin_en.ts` file, run the following commands:
+To automatically regenerate the `dash_en.ts` file, run the following commands:
 ```sh
 cd src/
 make translate
 ```
 
-`contrib/gtmcoin-qt.pro` takes care of generating `.qm` (binary compiled) files from `.ts` (source files) files. It’s mostly automated, and you shouldn’t need to worry about it.
+`contrib/dash-qt.pro` takes care of generating `.qm` (binary compiled) files from `.ts` (source files) files. It’s mostly automated, and you shouldn’t need to worry about it.
 
 **Example Qt translation**
 ```cpp
@@ -36,7 +36,7 @@ When an updated source file is merged into the Github repo, Transifex will autom
 
 To create the pull-request, use the following commands:
 ```
-git add src/qt/gtmcoinstrings.cpp src/qt/locale/gtmcoin_en.ts
+git add src/qt/dashstrings.cpp src/qt/locale/dash_en.ts
 git commit
 ```
 
@@ -75,7 +75,7 @@ The Transifex Dash project config file is included as part of the repo. It can b
 To assist in updating translations, we have created a script to help.
 
 1. `python contrib/devtools/update-translations.py`
-2. Update `src/qt/gtmcoin_locale.qrc` manually or via
+2. Update `src/qt/dash_locale.qrc` manually or via
    `ls src/qt/locale/*ts|xargs -n1 basename|sed 's/\(dash_\(.*\)\).ts/<file alias="\2">locale\/\1.qm<\/file>/'`
 3. Update `src/Makefile.qt.include` manually or via
    `ls src/qt/locale/*ts|xargs -n1 basename|sed 's/\(dash_\(.*\)\).ts/  qt\/locale\/\1.ts \\/'`
@@ -86,7 +86,7 @@ To assist in updating translations, we have created a script to help.
 ### Handling Plurals (in source files)
 When new plurals are added to the source file, it's important to do the following steps:
 
-1. Open `gtmcoin_en.ts` in Qt Linguist (included in the Qt SDK)
+1. Open `dash_en.ts` in Qt Linguist (included in the Qt SDK)
 2. Search for `%n`, which will take you to the parts in the translation that use plurals
 3. Look for empty `English Translation (Singular)` and `English Translation (Plural)` fields
 4. Add the appropriate strings for the singular and plural form of the base string

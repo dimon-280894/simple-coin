@@ -9,7 +9,7 @@ import operator
 import os
 import sys
 
-OUT_CPP="qt/gtmcoinstrings.cpp"
+OUT_CPP="qt/dashstrings.cpp"
 EMPTY=['""']
 
 def parse_po(text):

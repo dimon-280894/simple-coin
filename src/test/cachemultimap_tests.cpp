@@ -2,7 +2,7 @@
 
 #include "cachemultimap.h"
 
-#include "test/test_gtmcoin.h"
+#include "test/test_dash.h"
 
 #include <algorithm>
 #include <iostream>
