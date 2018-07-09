@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Label</key>
-	<string>org.dash.dashd</string>
+	<string>io.gtmcoin.gtmcoind</string>
 	<key>ProgramArguments</key>
 	<array>
 		<string>/usr/local/bin/dashd</string>
