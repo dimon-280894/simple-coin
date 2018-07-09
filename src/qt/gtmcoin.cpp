@@ -259,7 +259,7 @@ private:
     void startThread();
 };
 
-#include "dash.moc"
+#include "gtmcoin.moc"
 
 BitcoinCore::BitcoinCore():
     QObject()
