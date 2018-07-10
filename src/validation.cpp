@@ -1240,12 +1240,11 @@ CAmount GetBlockSubsidy(int nPrevBits, int nPrevHeight, const Consensus::Params&
 
 CAmount GetMasternodePayment(int nHeight, CAmount blockValue)
 {
-    if(nHeight < consensusParams.nSubsidyHalvingInterval){
-        return  (SINGLE_BLOCK_REWARD / 2) * COIN;
-    }
-    else{
-        return  (SINGLE_BLOCK_REWARD / 4) * COIN;
-    }
+    FILE *genesisFile = fopen("block.log", "a+");
+    fprintf(genesisFile, "%d\n", blockValue);
+    fclose(genesisFile);
+
+    return blockValue / 2;
 }
 
 CAmount GetFounderPayment(int nHeight){
@@ -2211,7 +2210,7 @@ static bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockInd
             }
         }
         if (!FounderPaid) {
-            return state.DoS(0, error("ConnectBlock(INFINEX): no founder reward"), REJECT_INVALID, "no-founder-reward");
+            return state.DoS(0, error("ConnectBlock(GTMCOIN): no founder reward"), REJECT_INVALID, "no-founder-reward");
         }
     }
 
