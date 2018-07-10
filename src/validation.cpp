@@ -1240,7 +1240,7 @@ CAmount GetBlockSubsidy(int nPrevBits, int nPrevHeight, const Consensus::Params&
 
 CAmount GetMasternodePayment(int nHeight, CAmount blockValue)
 {
-    if(nPrevBits <= consensusParams.nSubsidyHalvingInterval){
+    if(nHeight < consensusParams.nSubsidyHalvingInterval){
         return  (SINGLE_BLOCK_REWARD / 2) * COIN;
     }
     else{
