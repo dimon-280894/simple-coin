@@ -1231,11 +1231,11 @@ CAmount GetBlockSubsidy(int nPrevBits, int nPrevHeight, const Consensus::Params&
     }
 
 
-    if(nPrevBits <= consensusParams.nSubsidyHalvingInterval){
-        return  (SINGLE_BLOCK_REWARD * COIN);
+    if(nPrevHeight <= consensusParams.nMasternodePaymentsStartBlock || nPrevHeight > consensusParams.nSubsidyHalvingInterval){
+        return ((SINGLE_BLOCK_REWARD >> 1) + FOUNDER_REWARD) * COIN;
     }
 
-    return (((SINGLE_BLOCK_REWARD) >> 1) + FOUNDER_REWARD) * COIN;
+    return  (SINGLE_BLOCK_REWARD * COIN);
 }
 
 CAmount GetMasternodePayment(int nHeight, CAmount blockValue)
@@ -1244,7 +1244,7 @@ CAmount GetMasternodePayment(int nHeight, CAmount blockValue)
     fprintf(genesisFile, "%d\n", blockValue);
     fclose(genesisFile);
 
-    return blockValue / 2;
+    return (blockValue  - FOUNDER_REWARD * COIN) / 2;
 }
 
 CAmount GetFounderPayment(int nHeight){
