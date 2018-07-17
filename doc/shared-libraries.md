@@ -7,7 +7,7 @@ The purpose of this library is to make the verification functionality that is cr
 
 ### API
 
-The interface is defined in the C header `dashconsensus.h` located in  `src/script/dashconsensus.h`.
+The interface is defined in the C header `gentariumconsensus.h` located in  `src/script/gentariumconsensus.h`.
 
 #### Version
 

@@ -309,7 +309,7 @@
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <location filename="../dash.cpp" line="+542"/>
+        <location filename="../gentarium.cpp" line="+542"/>
         <source>A fatal error occurred. Dash Core can no longer continue safely and will quit.</source>
         <translation>A fatal error occurred. Dash Core can no longer continue safely and will quit.</translation>
     </message>
@@ -2526,7 +2526,7 @@ https://www.transifex.com/projects/p/dash/</translation>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../dash.cpp" line="+86"/>
+        <location filename="../gentarium.cpp" line="+86"/>
         <location line="+7"/>
         <location line="+15"/>
         <location line="+19"/>

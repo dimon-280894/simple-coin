@@ -432,7 +432,7 @@ dashd_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 dashd_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-dashd_SOURCES += dashd-res.rc
+dashd_SOURCES += gentariumd-res.rc
 endif
 
 dashd_LDADD = \
@@ -456,13 +456,13 @@ endif
 dashd_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
 
 # dash-cli binary #
-dash_cli_SOURCES = dash-cli.cpp
+dash_cli_SOURCES = gentarium-cli.cpp
 dash_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
 dash_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 dash_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-dash_cli_SOURCES += dash-cli-res.rc
+dash_cli_SOURCES += gentarium-cli-res.rc
 endif
 
 dash_cli_LDADD = \
@@ -473,13 +473,13 @@ dash_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
 #
 
 # dash-tx binary #
-dash_tx_SOURCES = dash-tx.cpp
+dash_tx_SOURCES = gentarium-tx.cpp
 dash_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 dash_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 dash_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-dash_tx_SOURCES += dash-tx-res.rc
+dash_tx_SOURCES += gentarium-tx-res.rc
 endif
 
 dash_tx_LDADD = \
