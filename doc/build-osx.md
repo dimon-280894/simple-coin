@@ -102,8 +102,8 @@ directory. We have to first create the RPC configuration file, though.
 Run `./dashd` to get the filename where it should be put, or just try these
 commands:
 
-    echo -e "rpcuser=dashrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/DashCore/dash.conf"
-    chmod 600 "/Users/${USER}/Library/Application Support/DashCore/dash.conf"
+    echo -e "rpcuser=dashrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/DashCore/gentarium.conf"
+    chmod 600 "/Users/${USER}/Library/Application Support/DashCore/gentarium.conf"
 
 The next time you run it, it will start downloading the blockchain, but it won't
 output anything while it's doing this. This process may take several hours;
