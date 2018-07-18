@@ -15,10 +15,10 @@ QT_TS = \
   qt/locale/gentarium_pt.ts \
   qt/locale/gentarium_ru.ts \
   qt/locale/gentarium_sk.ts \
-  qt/locale/dash_sv.ts \
-  qt/locale/dash_vi.ts \
-  qt/locale/dash_zh_CN.ts \
-  qt/locale/dash_zh_TW.ts
+  qt/locale/gentarium_sv.ts \
+  qt/locale/gentarium_vi.ts \
+  qt/locale/gentarium_zh_CN.ts \
+  qt/locale/gentarium_zh_TW.ts
 
 QT_FORMS_UI = \
   qt/forms/addressbookpage.ui \
