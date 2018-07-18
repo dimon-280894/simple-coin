@@ -141,7 +141,7 @@ You retain control of your money at all times..<hr> \
 <b>The PrivateSend process works like this:</b>\
 <ol type=\"1\"> \
 <li>PrivateSend begins by breaking your transaction inputs down into standard denominations. \
-These denominations are 0.01 GENTARIUM, 0.1 GENTARIUM, 1 GENTARIUM and 10 GENTARIUM -- sort of like the paper money you use every day.</li> \
+These denominations are 0.01 GTM, 0.1 GTM, 1 GTM and 10 GTM -- sort of like the paper money you use every day.</li> \
 <li>Your wallet then sends requests to specially configured software nodes on the network, called \"masternodes.\" \
 These masternodes are informed then that you are interested in mixing a certain denomination. \
 No identifiable information is sent to the masternodes, so they never know \"who\" you are.</li> \

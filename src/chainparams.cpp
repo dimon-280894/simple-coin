@@ -1,7 +1,7 @@
 // Copyright (c) 2010 Satoshi Nakamoto
 // Copyright (c) 2009-2014 The Bitcoin Core developers
-// Copyright (c) 2014-2017 The Gentarium Core developers
-// Copyright (c) 2018 The Gentrium development team
+// Copyright (c) 2014-2017 The Dash Core developers
+// Copyright (c) 20018- The The Gentarium developer team
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 

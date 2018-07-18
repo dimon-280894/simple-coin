@@ -46,9 +46,9 @@ QString BitcoinUnits::name(int unit)
     {
         switch(unit)
         {
-            case GENTARIUM: return QString("GENTARIUM");
-            case mGENTARIUM: return QString("mGENTARIUM");
-            case uGENTARIUM: return QString::fromUtf8("μGENTARIUM");
+            case GENTARIUM: return QString("GTM");
+            case mGENTARIUM: return QString("mGTM");
+            case uGENTARIUM: return QString::fromUtf8("μGTM");
             case duffs: return QString("duffs");
             default: return QString("???");
         }
@@ -57,9 +57,9 @@ QString BitcoinUnits::name(int unit)
     {
         switch(unit)
         {
-            case GENTARIUM: return QString("tGENTARIUM");
-            case mGENTARIUM: return QString("mtGENTARIUM");
-            case uGENTARIUM: return QString::fromUtf8("μtGENTARIUM");
+            case GENTARIUM: return QString("tGTM");
+            case mGENTARIUM: return QString("mtGTM");
+            case uGENTARIUM: return QString::fromUtf8("μtGTM");
             case duffs: return QString("tduffs");
             default: return QString("???");
         }
@@ -72,10 +72,10 @@ QString BitcoinUnits::description(int unit)
     {
         switch(unit)
         {
-            case GENTARIUM: return QString("Gentarium");
-            case mGENTARIUM: return QString("Milli-Gentarium (1 / 1" THIN_SP_UTF8 "000)");
-            case uGENTARIUM: return QString("Micro-Gentarium (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
-            case duffs: return QString("Ten Nano-Gentarium (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            case GENTARIUM: return QString("GTM");
+            case mGENTARIUM: return QString("Milli-GTM (1 / 1" THIN_SP_UTF8 "000)");
+            case uGENTARIUM: return QString("Micro-GTM (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            case duffs: return QString("Ten Nano-GTM (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
             default: return QString("???");
         }
     }
@@ -83,10 +83,10 @@ QString BitcoinUnits::description(int unit)
     {
         switch(unit)
         {
-            case GENTARIUM: return QString("TestGentariums");
-            case mGENTARIUM: return QString("Milli-TestGentarium (1 / 1" THIN_SP_UTF8 "000)");
-            case uGENTARIUM: return QString("Micro-TestGentarium (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
-            case duffs: return QString("Ten Nano-TestGentarium (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            case GENTARIUM: return QString("TestGTM");
+            case mGENTARIUM: return QString("Milli-TestGTM (1 / 1" THIN_SP_UTF8 "000)");
+            case uGENTARIUM: return QString("Micro-TestGTM (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            case duffs: return QString("Ten Nano-TestGTM (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
             default: return QString("???");
         }
     }

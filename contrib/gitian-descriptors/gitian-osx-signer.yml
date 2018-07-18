@@ -6,7 +6,7 @@ architectures:
 - "amd64"
 packages:
 - "faketime"
-reference_datetime: "2017-01-01 00:00:00"
+reference_datetime: "2018-07-18 00:00:00"
 remotes:
 - "url": "https://https://github.com/dimon-280894/simple-coin-detached-sigs.git"
   "dir": "signature"

@@ -251,7 +251,7 @@ public:
         return false;
     }
 
-    /// Is the input associated with collateral public key? (and there is 1000 GENTARIUM - checking if valid masternode)
+    /// Is the input associated with collateral public key? (and there is 1000 GTM - checking if valid masternode)
     bool IsInputAssociatedWithPubkey();
 
     bool IsValidNetAddr();

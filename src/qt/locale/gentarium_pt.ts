@@ -860,11 +860,11 @@ Endereço: %4
         <translation>Por favor seleccione um nível de privacidade.</translation>
     </message>
     <message>
-        <source>Use 2 separate masternodes to mix funds up to 1000 GENTARIUM</source>
+        <source>Use 2 separate masternodes to mix funds up to 1000 GTM</source>
         <translation>Usar 2 masternodes distintos para misturar os fundos até 1000DRK</translation>
     </message>
     <message>
-        <source>Use 8 separate masternodes to mix funds up to 1000 GENTARIUM</source>
+        <source>Use 8 separate masternodes to mix funds up to 1000 GTM</source>
         <translation>Usar 8 masternodes distintos para misturar os fundos até 1000DRK</translation>
     </message>
     <message>
@@ -872,16 +872,16 @@ Endereço: %4
         <translation>Usar 16 masternodes</translation>
     </message>
     <message>
-        <source>This option is the quickest and will cost about ~0.025 GENTARIUM to anonymize 1000 GENTARIUM</source>
-        <translation>Esta opção é a mais rápida e irá custar cerca de ~0.025 GENTARIUM para anonimizar 1000 GENTARIUM</translation>
+        <source>This option is the quickest and will cost about ~0.025 GTM to anonymize 1000 GTM</source>
+        <translation>Esta opção é a mais rápida e irá custar cerca de ~0.025 GTM para anonimizar 1000 GTM</translation>
     </message>
     <message>
-        <source>This option is moderately fast and will cost about 0.05 GENTARIUM to anonymize 1000 GENTARIUM</source>
-        <translation>Esta opção é relativamente rápida e irá custar cerca de ~0.05 GENTARIUM para anonimizar 1000 GENTARIUM</translation>
+        <source>This option is moderately fast and will cost about 0.05 GTM to anonymize 1000 GTM</source>
+        <translation>Esta opção é relativamente rápida e irá custar cerca de ~0.05 GTM para anonimizar 1000 GTM</translation>
     </message>
     <message>
-        <source>0.1 GENTARIUM per 1000 GENTARIUM you anonymize.</source>
-        <translation>0.1 GENTARIUM por cada 1000 GENTARIUM a anonimizar.</translation>
+        <source>0.1 GTM per 1000 GTM you anonymize.</source>
+        <translation>0.1 GTM por cada 1000 GTM a anonimizar.</translation>
     </message>
     <message>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
@@ -1427,8 +1427,8 @@ https://www.transifex.com/projects/p/gentarium/</translation>
         <translation>Quantia e Voltas:</translation>
     </message>
     <message>
-        <source>0 GENTARIUM / 0 Rounds</source>
-        <translation>0 GENTARIUM / 0 Voltas</translation>
+        <source>0 GTM / 0 Rounds</source>
+        <translation>0 GTM / 0 Voltas</translation>
     </message>
     <message>
         <source>Submitted Denom:</source>
@@ -3260,8 +3260,8 @@ https://www.transifex.com/projects/p/gentarium/</translation>
         <translation>Enviar Moedas</translation>
     </message>
     <message>
-        <source>InstantX doesn't support sending values that high yet. Transactions are currently limited to %1 GENTARIUM.</source>
-        <translation>O InstantX não suporta valores tão elevados neste momento. As transacções estão limitadas a %1 GENTARIUM.</translation>
+        <source>InstantX doesn't support sending values that high yet. Transactions are currently limited to %1 GTM.</source>
+        <translation>O InstantX não suporta valores tão elevados neste momento. As transacções estão limitadas a %1 GTM.</translation>
     </message>
 </context>
 <context>
@@ -3374,7 +3374,7 @@ https://www.transifex.com/projects/p/gentarium/</translation>
         <translation>Não foi possível localizar fundos Darksend denominados suficientes para esta transacção.</translation>
     </message>
     <message>
-        <source>Unable to locate enough Darksend non-denominated funds for this transaction that are not equal 1000 GENTARIUM.</source>
+        <source>Unable to locate enough Darksend non-denominated funds for this transaction that are not equal 1000 GTM.</source>
         <translation>Não foi possível localizar fundos Darksend não denominados suficientes para esta transacção que não sejam igual a 1000DRK.</translation>
     </message>
     <message>
@@ -3590,8 +3590,8 @@ https://www.transifex.com/projects/p/gentarium/</translation>
         <translation>Activar o uso de darksend automatizado para os fundos guardados nesta carteira (0-1, default: %u)</translation>
     </message>
     <message>
-        <source>Fees (in GENTARIUM/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
-        <translation>Taxas (em GENTARIUM/Kb) inferiores a esta serão consideradas zero para retransmissão (default: %s)</translation>
+        <source>Fees (in GTM/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
+        <translation>Taxas (em GTM/Kb) inferiores a esta serão consideradas zero para retransmissão (default: %s)</translation>
     </message>
     <message>
         <source>Flush database activity from memory pool to disk log every &lt;n&gt; megabytes (default: %u)</source>
@@ -3638,7 +3638,7 @@ https://www.transifex.com/projects/p/gentarium/</translation>
         <translation>Este produto inclui software desenvolvido pelo Projecto OpenSSL para uso no OpenSSL Toolkit &lt;https://www.openssl.org/&gt;, software criptográfico escrito por Eric Young e software UPnP escrito por Thomas Bernard.</translation>
     </message>
     <message>
-        <source>Unable to locate enough funds for this transaction that are not equal 1000 GENTARIUM.</source>
+        <source>Unable to locate enough funds for this transaction that are not equal 1000 GTM.</source>
         <translation>Não foi possível localizar fundos suficientes para esta transacção que não sejam igual a 1000DRK.</translation>
     </message>
     <message>
@@ -3696,7 +3696,7 @@ https://www.transifex.com/projects/p/gentarium/</translation>
         <translation>Copyright (C) 2009-%i The Bitcoin Core Developers</translation>
     </message>
     <message>
-        <source>Copyright (C) 2014-%i The Gentarium Core Developers</source>
+        <source>Copyright (C) 2014-%i The Dash Core, Gentarium Developers</source>
         <translation>Copyright (C) 2014-%i Gentarium Core Developers</translation>
     </message>
     <message>
@@ -3744,8 +3744,8 @@ https://www.transifex.com/projects/p/gentarium/</translation>
         <translation>Erro: Argument não suportado -tor encontrado, utilize -onion</translation>
     </message>
     <message>
-        <source>Fee (in GENTARIUM/kB) to add to transactions you send (default: %s)</source>
-        <translation>Taxas (em GENTARIUM/Kb) a adicionar às transacções que envia (omissão: %s)</translation>
+        <source>Fee (in GTM/kB) to add to transactions you send (default: %s)</source>
+        <translation>Taxas (em GTM/Kb) a adicionar às transacções que envia (omissão: %s)</translation>
     </message>
     <message>
         <source>Finalizing transaction.</source>
@@ -4104,8 +4104,8 @@ https://www.transifex.com/projects/p/gentarium/</translation>
         <translation>Chave KeePassHttp para usar na comunicação cifrada AES com o KeePass</translation>
     </message>
     <message>
-        <source>Keep N GENTARIUM anonymized (default: %u)</source>
-        <translation>Manter N GENTARIUM anonimizados (default: %u)</translation>
+        <source>Keep N GTM anonymized (default: %u)</source>
+        <translation>Manter N GTM anonimizados (default: %u)</translation>
     </message>
     <message>
         <source>Keep at most &lt;n&gt; unconnectable transactions in memory (default: %u)</source>

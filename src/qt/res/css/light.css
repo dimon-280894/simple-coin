@@ -1641,4 +1641,10 @@ QDialog#TransactionDescDialog QTextEdit { /* Contents of Receive Coin Dialog */
 border:1px solid #d7d7d7;
 }
 
+QProgressBar {
+    background-color: #e65f55;
+}
+
+
+
 

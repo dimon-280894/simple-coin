@@ -119,7 +119,7 @@ QT_TRANSLATE_NOOP("gentarium-core", ""
 "testnet: %s)"),
 QT_TRANSLATE_NOOP("gentarium-core", ""
 "InstantSend doesn't support sending values that high yet. Transactions are "
-"currently limited to %1 GENTARIUM."),
+"currently limited to %1 GTM."),
 QT_TRANSLATE_NOOP("gentarium-core", ""
 "InstantSend requires inputs with at least %d confirmations, you might need "
 "to wait a few minutes and try again."),
@@ -226,10 +226,10 @@ QT_TRANSLATE_NOOP("gentarium-core", ""
 "Unable to locate enough PrivateSend denominated funds for this transaction."),
 QT_TRANSLATE_NOOP("gentarium-core", ""
 "Unable to locate enough PrivateSend non-denominated funds for this "
-"transaction that are not equal 1000 GENTARIUM."),
+"transaction that are not equal 1000 GTM."),
 QT_TRANSLATE_NOOP("gentarium-core", ""
 "Unable to locate enough funds for this transaction that are not equal 1000 "
-"GENTARIUM."),
+"GTM."),
 QT_TRANSLATE_NOOP("gentarium-core", ""
 "Unsupported argument -socks found. Setting SOCKS version isn't possible "
 "anymore, only SOCKS5 proxies are supported."),
@@ -333,7 +333,7 @@ QT_TRANSLATE_NOOP("gentarium-core", "Connect to KeePassHttp on port <port> (defa
 QT_TRANSLATE_NOOP("gentarium-core", "Connect to a node to retrieve peer addresses, and disconnect"),
 QT_TRANSLATE_NOOP("gentarium-core", "Connection options:"),
 QT_TRANSLATE_NOOP("gentarium-core", "Copyright (C) 2009-%i The Bitcoin Core Developers"),
-QT_TRANSLATE_NOOP("gentarium-core", "Copyright (C) 2014-%i The Gentarium Core Developers"),
+QT_TRANSLATE_NOOP("gentarium-core", "Copyright (C) 2014-%i Dash Core, Gentarium Developers"),
 QT_TRANSLATE_NOOP("gentarium-core", "Corrupted block database detected"),
 QT_TRANSLATE_NOOP("gentarium-core", "Could not parse masternode.conf"),
 QT_TRANSLATE_NOOP("gentarium-core", "Debugging/Testing options:"),
@@ -403,7 +403,7 @@ QT_TRANSLATE_NOOP("gentarium-core", "Invalid port detected in masternode.conf"),
 QT_TRANSLATE_NOOP("gentarium-core", "Invalid script detected."),
 QT_TRANSLATE_NOOP("gentarium-core", "KeePassHttp id for the established association"),
 QT_TRANSLATE_NOOP("gentarium-core", "KeePassHttp key for AES encrypted communication with KeePass"),
-QT_TRANSLATE_NOOP("gentarium-core", "Keep N GENTARIUM anonymized (default: %u)"),
+QT_TRANSLATE_NOOP("gentarium-core", "Keep N GTM anonymized (default: %u)"),
 QT_TRANSLATE_NOOP("gentarium-core", "Keep at most <n> unconnectable transactions in memory (default: %u)"),
 QT_TRANSLATE_NOOP("gentarium-core", "Keep the transaction memory pool below <n> megabytes (default: %u)"),
 QT_TRANSLATE_NOOP("gentarium-core", "Keypool ran out, please call keypoolrefill first"),

@@ -1,5 +1,5 @@
 ---
-name: "gentarium-linux-0.12"
+name: "gentarium-linux"
 enable_cache: true
 suites:
 - "trusty"
@@ -18,7 +18,7 @@ packages:
 - "binutils-gold"
 - "ca-certificates"
 - "python"
-reference_datetime: "2017-01-01 00:00:00"
+reference_datetime: "2018-07-18 00:00:00"
 remotes:
 - "url": "https://github.com/dimon-280894/simple-coin.git"
   "dir": "gentarium"
