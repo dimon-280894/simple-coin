@@ -3316,7 +3316,7 @@ bool CWallet::CreateTransaction(const vector<CRecipient>& vecSend, CWalletTx& wt
 
                         // Fill a vout to ourself
                         // TODO: pass in scriptChange instead of reservekey so
-                        // change transaction isn't always pay-to-genterium-address
+                        // change transaction isn't always pay-to-gentarium-address
                         CScript scriptChange;
 
                         // coin control: send change to custom address

@@ -176,7 +176,7 @@
         <translation>Plånbok krypterad</translation>
     </message>
     <message>
-        <source>Gentarium will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your genteriums from being stolen by malware infecting your computer.</source>
+        <source>Gentarium will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your gentariums from being stolen by malware infecting your computer.</source>
         <translation>Gentarium kommer nu att färdigställa krypteringsprocessen. Kom ihåg att krypteringen av din plånbok inte kan skydda dig helt och hållet från att dina Gentarium stjäls av skadeprogram som har infekterat din dator.</translation>
     </message>
     <message>
@@ -252,7 +252,7 @@
         <translation>&amp;Motta</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and genterium: URIs)</source>
+        <source>Request payments (generates QR codes and gentarium: URIs)</source>
         <translation>Begär betalningar (genererar QR-koder och Gentarium:-URI:s)</translation>
     </message>
     <message>
@@ -404,7 +404,7 @@
         <translation>Öppna &amp;URI...</translation>
     </message>
     <message>
-        <source>Open a genterium: URI or payment request</source>
+        <source>Open a gentarium: URI or payment request</source>
         <translation>Öppna en Gentarium-URI eller betalningsbegäran</translation>
     </message>
     <message>
@@ -1106,9 +1106,9 @@ Adress: %4
     </message>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/projects/p/genterium/</source>
+https://www.transifex.com/projects/p/gentarium/</source>
         <translation>Fattas språk eller är det en ofullständig översättning? Hjälp till att bidra med översättningar här:
-https://www.transifex.com/projects/p/genterium/</translation>
+https://www.transifex.com/projects/p/gentarium/</translation>
     </message>
     <message>
         <source>&amp;Unit to show amounts in:</source>
@@ -1335,8 +1335,8 @@ https://www.transifex.com/projects/p/genterium/</translation>
         <translation>Fel vid betalningsbegäran</translation>
     </message>
     <message>
-        <source>Cannot start genterium: click-to-pay handler</source>
-        <translation>Kan inte starta genterium: klicka-för-att-betala hanterare</translation>
+        <source>Cannot start gentarium: click-to-pay handler</source>
+        <translation>Kan inte starta gentarium: klicka-för-att-betala hanterare</translation>
     </message>
     <message>
         <source>URI handling</source>
@@ -1958,7 +1958,7 @@ https://www.transifex.com/projects/p/genterium/</translation>
         <translation>Meddelande:</translation>
     </message>
     <message>
-        <source>A message that was attached to the genterium: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Gentarium network.</source>
+        <source>A message that was attached to the gentarium: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Gentarium network.</source>
         <translation>Ett meddelande som bifogades till Gentarium: URI vilket kommer att lagras med transaktionen så att du vet. Observera: Meddelandet kommer inte att skickas över Gentarium-nätverket.</translation>
     </message>
     <message>
@@ -2656,7 +2656,7 @@ https://www.transifex.com/projects/p/genterium/</translation>
     </message>
 </context>
 <context>
-    <name>genterium-core</name>
+    <name>gentarium-core</name>
     <message>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>
         <translation>Sammanbind till fastställd adress och avlyssna alltid den. Använd [host]:port-notation för IPv6</translation>

@@ -1,4 +1,4 @@
-Genterium Core 1.0.0
+gentarium Core 1.0.0
 =====================
 
 Intro

@@ -349,14 +349,14 @@ static const CRPCCommand vRPCCommands[] =
     { "gentarium",               "masternodebroadcast",    &masternodebroadcast,    true  },
     { "gentarium",               "gobject",                &gobject,                true  },
     { "gentarium",               "getgovernanceinfo",      &getgovernanceinfo,      true  },
-    { "genterium",               "getsuperblockbudget",    &getsuperblockbudget,    true  },
-    { "genterium",               "voteraw",                &voteraw,                true  },
-    { "genterium",               "mnsync",                 &mnsync,                 true  },
-    { "genterium",               "spork",                  &spork,                  true  },
-    { "genterium",               "getpoolinfo",            &getpoolinfo,            true  },
-    { "genterium",               "sentinelping",           &sentinelping,           true  },
+    { "gentarium",               "getsuperblockbudget",    &getsuperblockbudget,    true  },
+    { "gentarium",               "voteraw",                &voteraw,                true  },
+    { "gentarium",               "mnsync",                 &mnsync,                 true  },
+    { "gentarium",               "spork",                  &spork,                  true  },
+    { "gentarium",               "getpoolinfo",            &getpoolinfo,            true  },
+    { "gentarium",               "sentinelping",           &sentinelping,           true  },
 #ifdef ENABLE_WALLET
-    { "genterium",               "privatesend",            &privatesend,            false },
+    { "gentarium",               "privatesend",            &privatesend,            false },
 
     /* Wallet */
     { "wallet",             "keepass",                &keepass,                true },
@@ -580,7 +580,7 @@ std::vector<std::string> CRPCTable::listCommands() const
 
 std::string HelpExampleCli(const std::string& methodname, const std::string& args)
 {
-    return "> genterium-cli " + methodname + " " + args + "\n";
+    return "> gentarium-cli " + methodname + " " + args + "\n";
 }
 
 std::string HelpExampleRpc(const std::string& methodname, const std::string& args)

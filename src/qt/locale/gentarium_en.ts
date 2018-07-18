@@ -4901,9 +4901,9 @@ https://www.transifex.com/projects/p/gentarium/</translation>
     </message>
 </context>
 <context>
-    <name>genterium-core</name>
+    <name>gentarium-core</name>
     <message>
-        <location filename="../genteriumstrings.cpp" line="+34"/>
+        <location filename="../gentariumstrings.cpp" line="+34"/>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>
         <translation>Bind to given address and always listen on it. Use [host]:port notation for IPv6</translation>
     </message>

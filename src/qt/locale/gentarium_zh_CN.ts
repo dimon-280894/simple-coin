@@ -443,7 +443,7 @@
         <translation>打开 &amp;URI...</translation>
     </message>
     <message>
-        <source>Open a genterium: URI or payment request</source>
+        <source>Open a gentarium: URI or payment request</source>
         <translation>打开达世币：网页或付款请求</translation>
     </message>
     <message>
@@ -1264,9 +1264,9 @@ Address: %4
     </message>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/projects/p/genterium/</source>
+https://www.transifex.com/projects/p/gentarium/</source>
         <translation>缺少相关语言或翻译不完整? 请到这里协助翻译:
-https://www.transifex.com/projects/p/genterium/</translation>
+https://www.transifex.com/projects/p/gentarium/</translation>
     </message>
     <message>
         <source>User Interface Theme:</source>
@@ -1561,7 +1561,7 @@ https://www.transifex.com/projects/p/genterium/</translation>
         <translation>支付请求出错</translation>
     </message>
     <message>
-        <source>Cannot start genterium: click-to-pay handler</source>
+        <source>Cannot start gentarium: click-to-pay handler</source>
         <translation>无法启动达世币程序：click-to-pay handler</translation>
     </message>
     <message>
@@ -2289,7 +2289,7 @@ https://www.transifex.com/projects/p/genterium/</translation>
 但如果交易信息大于一千字节,那么两者都要支付千字节费用.</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for genterium transactions than the network can process.</source>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for gentarium transactions than the network can process.</source>
         <translation>当交易量少于区块可容纳的空间时,只需支付最低手续费.&lt;br /&gt;但当交易量的需求增长到超过总体网络可处理的量时,可能会造成一笔一直不被确认的交易.</translation>
     </message>
     <message>
@@ -2552,7 +2552,7 @@ https://www.transifex.com/projects/p/genterium/</translation>
         <translation>消息：</translation>
     </message>
     <message>
-        <source>A message that was attached to the genterium: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Gentarium network.</source>
+        <source>A message that was attached to the gentarium: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Gentarium network.</source>
         <translation>附加在达世币付款协议URI中的信息,会和交易内容一并存储,可供您参考.提示:此信息不会发送到达世币网络上.</translation>
     </message>
     <message>
@@ -3301,7 +3301,7 @@ https://www.transifex.com/projects/p/genterium/</translation>
     </message>
 </context>
 <context>
-    <name>genterium-core</name>
+    <name>gentarium-core</name>
     <message>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>
         <translation>与提供地址绑定，持续监听。使用[host]:标记IPv6端口</translation>
