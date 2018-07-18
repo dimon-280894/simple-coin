@@ -1,9 +1,7 @@
 Dash Core staging tree 0.12.2
 ===============================
 
-`master:` [![Build Status](https://travis-ci.org/dashpay/dash.svg?branch=master)](https://travis-ci.org/dashpay/dash) `develop:` [![Build Status](https://travis-ci.org/dashpay/dash.svg?branch=develop)](https://travis-ci.org/dashpay/dash/branches)
-
-https://www.dash.org
+https://www.gtmcoin.io
 
 
 What is Dash?
@@ -29,7 +27,7 @@ Development Process
 -------------------
 
 The `master` branch is meant to be stable. Development is normally done in separate branches.
-[Tags](https://github.com/dashpay/dash/tags) are created to indicate new official,
+[Tags](https://github.com/dimon-280894/simple-coin/tags) are created to indicate new official,
 stable release versions of Dash Core.
 
 The contribution workflow is described in [CONTRIBUTING.md](CONTRIBUTING.md).
