@@ -504,7 +504,7 @@ libdashconsensus_la_SOURCES = \
   hash.cpp \
   primitives/transaction.cpp \
   pubkey.cpp \
-  script/dashconsensus.cpp \
+  script/gentariumconsensus.cpp \
   script/interpreter.cpp \
   script/script.cpp \
   uint256.cpp \
