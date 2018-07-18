@@ -1,4 +1,4 @@
-Gentarium Core staging tree 0.12.2
+Gentarium Core staging tree 1.0.0
 ===============================
 
 https://www.gtmcoin.io

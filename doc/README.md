@@ -1,4 +1,4 @@
-Gentarium Core 0.12.1
+Gentarium Core 1.0.0
 =====================
 
 This is the official reference wallet for Gentarium digital currency and comprises the backbone of the Gentarium peer-to-peer network. You can [download Gentarium Core](https://www.gentarium.org/downloads/) or [build it yourself](#building) using the guides below.
