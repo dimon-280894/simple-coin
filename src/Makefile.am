@@ -494,7 +494,7 @@ dash_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
 
 # dashconsensus library #
 if BUILD_BITCOIN_LIBS
-include_HEADERS = script/dashconsensus.h
+include_HEADERS = script/gentariumconsensus.h
 libdashconsensus_la_SOURCES = \
   crypto/hmac_sha512.cpp \
   crypto/ripemd160.cpp \
