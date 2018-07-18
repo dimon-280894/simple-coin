@@ -54,7 +54,7 @@ private:
     size_t m_remaining;
 };
 
-inline int set_error(dashconsensus_error* ret, dashconsensus_error serror)
+inline int set_error(genteriumconsensus_error* ret, genteriumconsensus_error serror)
 {
     if (ret)
         *ret = serror;
@@ -69,29 +69,29 @@ struct ECCryptoClosure
 ECCryptoClosure instance_of_eccryptoclosure;
 }
 
-int dashconsensus_verify_script(const unsigned char *scriptPubKey, unsigned int scriptPubKeyLen,
+int genteriumconsensus_verify_script(const unsigned char *scriptPubKey, unsigned int scriptPubKeyLen,
                                     const unsigned char *txTo        , unsigned int txToLen,
-                                    unsigned int nIn, unsigned int flags, dashconsensus_error* err)
+                                    unsigned int nIn, unsigned int flags, genteriumconsensus_error* err)
 {
     try {
         TxInputStream stream(SER_NETWORK, PROTOCOL_VERSION, txTo, txToLen);
         CTransaction tx;
         stream >> tx;
         if (nIn >= tx.vin.size())
-            return set_error(err, dashconsensus_ERR_TX_INDEX);
+            return set_error(err, genteriumconsensus_ERR_TX_INDEX);
         if (tx.GetSerializeSize(SER_NETWORK, PROTOCOL_VERSION) != txToLen)
-            return set_error(err, dashconsensus_ERR_TX_SIZE_MISMATCH);
+            return set_error(err, genteriumconsensus_ERR_TX_SIZE_MISMATCH);
 
          // Regardless of the verification result, the tx did not error.
-         set_error(err, dashconsensus_ERR_OK);
+         set_error(err, genteriumconsensus_ERR_OK);
 
         return VerifyScript(tx.vin[nIn].scriptSig, CScript(scriptPubKey, scriptPubKey + scriptPubKeyLen), flags, TransactionSignatureChecker(&tx, nIn), NULL);
     } catch (const std::exception&) {
-        return set_error(err, dashconsensus_ERR_TX_DESERIALIZE); // Error deserializing
+        return set_error(err, genteriumconsensus_ERR_TX_DESERIALIZE); // Error deserializing
     }
 }
 
-unsigned int dashconsensus_version()
+unsigned int genteriumconsensus_version()
 {
     // Just use the API version for now
     return BITCOINCONSENSUS_API_VER;

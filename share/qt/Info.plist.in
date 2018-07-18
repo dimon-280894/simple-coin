@@ -17,7 +17,7 @@
   <string>APPL</string>
 
   <key>CFBundleGetInfoString</key>
-  <string>@CLIENT_VERSION_MAJOR@.@CLIENT_VERSION_MINOR@.@CLIENT_VERSION_REVISION@, Copyright © 2009-@COPYRIGHT_YEAR@ The Bitcoin Core developers, 2014-@COPYRIGHT_YEAR@ The Dash Core developers</string>
+  <string>@CLIENT_VERSION_MAJOR@.@CLIENT_VERSION_MINOR@.@CLIENT_VERSION_REVISION@, Copyright © 2009-@COPYRIGHT_YEAR@ The Bitcoin Core developers, 2014-@COPYRIGHT_YEAR@ The Gentarium Core developers</string>
 
   <key>CFBundleShortVersionString</key>
   <string>@CLIENT_VERSION_MAJOR@.@CLIENT_VERSION_MINOR@.@CLIENT_VERSION_REVISION@</string>
@@ -29,16 +29,16 @@
   <string>????</string>
 
   <key>CFBundleExecutable</key>
-  <string>Dash-Qt</string>
+  <string>Gentarium-Qt</string>
   
   <key>CFBundleName</key>
-  <string>Dash-Qt</string>
+  <string>Gentarium-Qt</string>
 
   <key>LSHasLocalizedDisplayName</key>
   <true/>
 
   <key>CFBundleIdentifier</key>
-  <string>org.dash.Dash-Qt</string>
+  <string>org.gentarium.Gentarium-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>
@@ -49,7 +49,7 @@
       <string>io.gentarium.GTMPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
-        <string>dash</string>
+        <string>gentarium</string>
       </array>
     </dict>
   </array>
@@ -58,9 +58,9 @@
   <array>
     <dict>
       <key>UTTypeIdentifier</key>
-      <string>org.dash.paymentrequest</string>
+      <string>org.gentarium.paymentrequest</string>
       <key>UTTypeDescription</key>
-      <string>Dash payment request</string>
+      <string>Gentarium payment request</string>
       <key>UTTypeConformsTo</key>
       <array>
         <string>public.data</string>
@@ -68,7 +68,7 @@
       <key>UTTypeTagSpecification</key>
       <dict>
         <key>public.mime-type</key>
-        <string>application/x-dash-payment-request</string>
+        <string>application/x-gentarium-payment-request</string>
         <key>public.filename-extension</key>
         <array>
           <string>gentarium.mentrequest</string>
@@ -84,7 +84,7 @@
       <string>Editor</string>
       <key>LSItemContentTypes</key>
       <array>
-        <string>org.dash.paymentrequest</string>
+        <string>org.gentarium.paymentrequest</string>
       </array>
       <key>LSHandlerRank</key>
       <string>Owner</string>

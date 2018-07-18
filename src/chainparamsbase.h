@@ -9,8 +9,8 @@
 #include <vector>
 
 /**
- * CBaseChainParams defines the base parameters (shared between dash-cli and dashd)
- * of a given instance of the Dash system.
+ * CBaseChainParams defines the base parameters (shared between gentarium-cli and gentariumd)
+ * of a given instance of the Gentarium system.
  */
 class CBaseChainParams
 {

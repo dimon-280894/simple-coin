@@ -1,6 +1,7 @@
 // Copyright (c) 2010 Satoshi Nakamoto
 // Copyright (c) 2009-2014 The Bitcoin Core developers
-// Copyright (c) 2014-2017 The Dash Core developers
+// Copyright (c) 2014-2017 The Gentarium Core developers
+// Copyright (c) 2018 The Gentrium development team
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -92,8 +93,8 @@ public:
         consensus.BIP34Height = 1;
         consensus.BIP34Hash = uint256S(MAIN_GENESIS);
         consensus.powLimit = uint256S("00000fffff000000000000000000000000000000000000000000000000000000");
-        consensus.nPowTargetTimespan = 24 * 60 * 60; // Dash: 1 day
-        consensus.nPowTargetSpacing = 2 * 60; // Dash: 2.5 minutes
+        consensus.nPowTargetTimespan = 24 * 60 * 60; // Gentarium: 1 day
+        consensus.nPowTargetSpacing = 2 * 60; // Gentarium: 2.5 minutes
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
         consensus.nPowKGWHeight = 15200;
@@ -146,18 +147,18 @@ public:
         vSeeds.push_back(CDNSSeedData("dnsseed1.gtmcoin.io", "dnsseed1.gtmcoin.io"));
         vSeeds.push_back(CDNSSeedData("dnsseed2.gtmcoin.io", "dnsseed2.gtmcoin.io"));
 
-        // Dash addresses start with 'G'
+        // Gentarium addresses start with 'G'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,38);
-        // Dash script addresses start with '7'
+        // Gentarium script addresses start with '7'
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,10);
-        // Dash private keys start with '7' or 'G'
+        // Gentarium private keys start with '7' or 'G'
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,198);
-        // Dash BIP32 pubkeys start with 'xpub' (Bitcoin defaults)
+        // Gentarium BIP32 pubkeys start with 'xpub' (Bitcoin defaults)
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0x88)(0xB2)(0x1E).convert_to_container<std::vector<unsigned char> >();
-        // Dash BIP32 prvkeys start with 'xprv' (Bitcoin defaults)
+        // Gentarium BIP32 prvkeys start with 'xprv' (Bitcoin defaults)
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x04)(0x88)(0xAD)(0xE4).convert_to_container<std::vector<unsigned char> >();
 
-        // Dash BIP44 coin type is '5'
+        // Gentarium BIP44 coin type is '5'
         nExtCoinType = 5;
 
         vFixedSeeds.clear();
@@ -214,8 +215,8 @@ public:
         consensus.BIP34Height = 1;
         consensus.BIP34Hash = uint256S(TEST_GENESIS);
         consensus.powLimit = uint256S("00000fffff000000000000000000000000000000000000000000000000000000");
-        consensus.nPowTargetTimespan = 24 * 60 * 60; // Dash: 1 day
-        consensus.nPowTargetSpacing = 2 * 60; // Dash: 2.5 minutes
+        consensus.nPowTargetTimespan = 24 * 60 * 60; // Gentarium: 1 day
+        consensus.nPowTargetSpacing = 2 * 60; // Gentarium: 2.5 minutes
         consensus.fPowAllowMinDifficultyBlocks = true;
         consensus.fPowNoRetargeting = false;
         consensus.nPowKGWHeight = 4001; // nPowKGWHeight >= nPowDGWHeight means "no KGW"
@@ -262,18 +263,18 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
 
-        // Testnet Dash addresses start with 'G'
+        // Testnet Gentarium addresses start with 'G'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 38);
-        // Testnet Dash script addresses start with '5'
+        // Testnet Gentarium script addresses start with '5'
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 10);
         // Testnet private keys start with 'G'
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1, 198);
-        // Testnet Dash BIP32 pubkeys start with 'tpub' (Bitcoin defaults)
+        // Testnet Gentarium BIP32 pubkeys start with 'tpub' (Bitcoin defaults)
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0x35)(0x87)(0xCF).convert_to_container<std::vector<unsigned char> >();
-        // Testnet Dash BIP32 prvkeys start with 'tprv' (Bitcoin defaults)
+        // Testnet Gentarium BIP32 prvkeys start with 'tprv' (Bitcoin defaults)
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x04)(0x35)(0x83)(0x94).convert_to_container<std::vector<unsigned char> >();
 
-        // Testnet Dash BIP44 coin type is '1' (All coin's testnet default)
+        // Testnet Gentarium BIP44 coin type is '1' (All coin's testnet default)
         nExtCoinType = 1;
 
         vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_test, pnSeed6_test + ARRAYLEN(pnSeed6_test));
@@ -330,8 +331,8 @@ public:
         consensus.BIP34Height = -1; // BIP34 has not necessarily activated on regtest
         consensus.BIP34Hash = uint256();
         consensus.powLimit = uint256S("7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
-        consensus.nPowTargetTimespan = 24 * 60 * 60; // Dash: 1 day
-        consensus.nPowTargetSpacing = 2.5 * 60; // Dash: 2.5 minutes
+        consensus.nPowTargetTimespan = 24 * 60 * 60; // Gentarium: 1 day
+        consensus.nPowTargetSpacing = 2.5 * 60; // Gentarium: 2.5 minutes
         consensus.fPowAllowMinDifficultyBlocks = true;
         consensus.fPowNoRetargeting = true;
         consensus.nPowKGWHeight = 15200; // same as mainnet
@@ -386,18 +387,18 @@ public:
             0,
             0
         };
-        // Regtest Dash addresses start with 'G'
+        // Regtest Gentarium addresses start with 'G'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,38);
-        // Regtest Dash script addresses start with '5'
+        // Regtest Gentarium script addresses start with '5'
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,10);
         // Regtest private keys start with'G'
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,198);
-        // Regtest Dash BIP32 pubkeys start with 'tpub' (Bitcoin defaults)
+        // Regtest Gentarium BIP32 pubkeys start with 'tpub' (Bitcoin defaults)
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0x35)(0x87)(0xCF).convert_to_container<std::vector<unsigned char> >();
-        // Regtest Dash BIP32 prvkeys start with 'tprv' (Bitcoin defaults)
+        // Regtest Gentarium BIP32 prvkeys start with 'tprv' (Bitcoin defaults)
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x04)(0x35)(0x83)(0x94).convert_to_container<std::vector<unsigned char> >();
 
-        // Regtest Dash BIP44 coin type is '1' (All coin's testnet default)
+        // Regtest Gentarium BIP44 coin type is '1' (All coin's testnet default)
         nExtCoinType = 1;
 
         founderAddress = "GZYFJs8tLpWiGDiddbkVUAUfb8XswSgoiK";

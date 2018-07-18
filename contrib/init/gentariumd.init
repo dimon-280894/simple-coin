@@ -1,36 +1,36 @@
 #!/bin/bash
 #
-#  dashd The Dash Core server.
+#  gentariumd The Gentarium Core server.
 #
 #
 # chkconfig: 345 80 20
-# description: dashd
-# processname: dashd
+# description: gentariumd
+# processname: gentariumd
 #
 
 # Source function library.
 . /etc/init.d/functions
 
-# you can override defaults in /etc/sysconfig/dashd, see below
-if [ -f /etc/sysconfig/dashd ]; then
-        . /etc/sysconfig/dashd
+# you can override defaults in /etc/sysconfig/gentariumd, see below
+if [ -f /etc/sysconfig/gentariumd ]; then
+        . /etc/sysconfig/gentariumd
 fi
 
 RETVAL=0
 
-prog=dashd
-# you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/dashd
-lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/dashd}
+prog=gentariumd
+# you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/gentariumd
+lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/gentariumd}
 
-# dashd defaults to /usr/bin/dashd, override with BITCOIND_BIN
-dashd=${BITCOIND_BIN-/usr/bin/dashd}
+# gentariumd defaults to /usr/bin/gentariumd, override with BITCOIND_BIN
+gentariumd=${BITCOIND_BIN-/usr/bin/gentariumd}
 
-# dashd opts default to -disablewallet, override with BITCOIND_OPTS
-dashd_opts=${BITCOIND_OPTS--disablewallet}
+# gentariumd opts default to -disablewallet, override with BITCOIND_OPTS
+gentariumd_opts=${BITCOIND_OPTS--disablewallet}
 
 start() {
     echo -n $"Starting $prog: "
-    daemon $DAEMONOPTS $dashd $dashd_opts
+    daemon $DAEMONOPTS $gentariumd $gentariumd_opts
     RETVAL=$?
     echo
     [ $RETVAL -eq 0 ] && touch $lockfile

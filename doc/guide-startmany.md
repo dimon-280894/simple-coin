@@ -16,9 +16,9 @@ Create a new wallet address for each Masternode.
 
 Close your QT Wallet.
 
-### Send 1000 DASH to New Addresses
+### Send 1000 GENTARIUM to New Addresses
 
-Send exactly 1000 DASH to each new address created above.
+Send exactly 1000 GENTARIUM to each new address created above.
 
 ### Create New Masternode Private Keys
 
@@ -38,9 +38,9 @@ Remember... this is local. Make sure your QT is not running.
 
 Create the `masternode.conf` file in the same directory as your `wallet.dat`.
 
-Copy the masternode private key and correspondig collateral output transaction that holds the 1000 DASH.
+Copy the masternode private key and correspondig collateral output transaction that holds the 1000 GENTARIUM.
 
-*Note: The masternode priviate key is **not** the same as a wallet private key. **Never** put your wallet private key in the masternode.conf file. That is almost equivalent to putting your 1000 DASH on the remote server and defeats the purpose of a hot/cold setup.*
+*Note: The masternode priviate key is **not** the same as a wallet private key. **Never** put your wallet private key in the masternode.conf file. That is almost equivalent to putting your 1000 GENTARIUM on the remote server and defeats the purpose of a hot/cold setup.*
 
 ### Get the collateral output
 
@@ -53,7 +53,7 @@ Issue the following:
 Make note of the hash (which is your collateral_output) and index.
 
 ### Enter your Masternode details into your masternode.conf file
-[From the dash github repo](https://https://github.com/dimon-280894/simple-coin/blob/master/doc/masternode_conf.md)
+[From the gentarium github repo](https://https://github.com/dimon-280894/simple-coin/blob/master/doc/masternode_conf.md)
 
 `masternode.conf` format is a space seperated text file. Each line consisting of an alias, IP address followed by port, masternode private key, collateral output transaction id and collateral output index.
 
@@ -74,7 +74,7 @@ If you generated a new masternode private key, you will need to update the remot
 
 Shut down the daemon and then edit the file.
 
-```nano .dashcore/gentarium.conf```
+```nano .gentariumcore/gentarium.conf```
 
 ### Edit the masternodeprivkey
 If you generated a new masternode private key, you will need to update the `masternodeprivkey` value in your remote `gentarium.conf` file.
@@ -87,9 +87,9 @@ If your remote server is not running, start your remote daemon as you normally w
 
 You can confirm that remote server is on the correct block by issuing
 
-```dash-cli getinfo```
+```gentarium-cli getinfo```
 
-and comparing with the official explorer at https://explorer.dash.org/chain/Dash
+and comparing with the official explorer at https://explorer.gentarium.org/chain/Gentarium
 
 ### Local
 
@@ -116,11 +116,11 @@ Example ```masternode start-alias mn01```
 Issue command `masternode status`
 It should return you something like that:
 ```
-dash-cli masternode status
+gentarium-cli masternode status
 {
     "outpoint" : "<collateral_output>-<collateral_output_index>",
     "service" : "<ipaddress>:<port>",
-    "pubkey" : "<1000 DASH address>",
+    "pubkey" : "<1000 GENTARIUM address>",
     "status" : "Masternode successfully started"
 }
 ```
@@ -128,6 +128,6 @@ Command output should have "_Masternode successfully started_" in its `status` f
 
 ### Local
 
-Search your Masternodes on https://dashninja.pl/masternodes.html
+Search your Masternodes on https://gentariumninja.pl/masternodes.html
 
 _Hint: Bookmark it, you definitely will be using this site a lot._

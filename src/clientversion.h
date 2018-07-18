@@ -6,14 +6,14 @@
 #define BITCOIN_CLIENTVERSION_H
 
 #if defined(HAVE_CONFIG_H)
-#include "config/dash-config.h"
+#include "config/gentarium-config.h"
 #else
 
 /**
  * client versioning and copyright year
  */
 
-//! These need to be macros, as clientversion.cpp's and dash*-res.rc's voodoo requires it
+//! These need to be macros, as clientversion.cpp's and gentarium*-res.rc's voodoo requires it
 #define CLIENT_VERSION_MAJOR 0
 #define CLIENT_VERSION_MINOR 12
 #define CLIENT_VERSION_REVISION 2
@@ -38,7 +38,7 @@
 #define DO_STRINGIZE(X) #X
 
 //! Copyright string used in Windows .rc files
-#define COPYRIGHT_STR "2009-" STRINGIZE(COPYRIGHT_YEAR) " The Bitcoin Core Developers, 2014-" STRINGIZE(COPYRIGHT_YEAR) " The Dash Core Developers"
+#define COPYRIGHT_STR "2009-" STRINGIZE(COPYRIGHT_YEAR) " The Bitcoin Core Developers, 2014-" STRINGIZE(COPYRIGHT_YEAR) " The Gentarium Core Developers"
 
 /**
  * gentariumd-res.rc includes this file, but it cannot cope with real c++ code.

@@ -3,7 +3,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include "config/dash-config.h"
+#include "config/gentarium-config.h"
 #endif
 
 #include "optionsdialog.h"
@@ -92,7 +92,7 @@ OptionsDialog::OptionsDialog(QWidget *parent, bool enableWallet) :
     }
     
     /* Theme selector */
-    ui->theme->addItem(QString("DASH-light"), QVariant("light"));
+    ui->theme->addItem(QString("GENTARIUM-light"), QVariant("light"));
     
     /* Language selector */
     QDir translations(":translations");
