@@ -426,7 +426,7 @@ nodist_libbitcoin_util_a_SOURCES = $(srcdir)/obj/build.h
 #
 
 # bitcoind binary #
-dashd_SOURCES = dashd.cpp
+dashd_SOURCES = gentariumd.cpp
 dashd_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 dashd_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 dashd_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
