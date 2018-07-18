@@ -69,7 +69,7 @@ bool AppInit(int argc, char* argv[])
     //
     // Parameters
     //
-    // If Qt is used, parameters/gentarium.conf are parsed in qt/dash.cpp's main()
+    // If Qt is used, parameters/gentarium.conf are parsed in qt/gentarium.cpp's main()
     ParseParameters(argc, argv);
 
     // Process help and version before taking care about datadir
