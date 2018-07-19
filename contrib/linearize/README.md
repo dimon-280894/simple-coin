@@ -3,7 +3,7 @@ Construct a linear, no-fork, best version of the blockchain.
 
 ## Step 0: Install gentarium_hash
 
-https://https://github.com/dimon-280894/simple-coin_hash
+https://https://github.com/genterium-project/gentarium_hash
 
 ## Step 1: Download hash list
 

@@ -1,5 +1,5 @@
 #!/bin/bash
-if ! [[ "$2" =~ ^(git@)?(www.)?github.com(:|/)dimon-280894/simple-coin/(.git)?$ ]]; then
+if ! [[ "$2" =~ ^(git@)?(www.)?github.com(:|/)genterium-project/gentarium/(.git)?$ ]]; then
     exit 0
 fi
 
