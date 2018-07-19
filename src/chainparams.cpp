@@ -73,8 +73,7 @@ public:
     CMainParams() {
         strNetworkID = "main";
         consensus.nSubsidyHalvingInterval = 262800; // Note: actual number of blocks per calendar year with DGW v3
-        // consensus.nMasternodePaymentsStartBlock = 3600; // ~5 days.Not true, but it's ok as long as it's less then nMasternodePaymentsIncreaseBlock
-        consensus.nMasternodePaymentsStartBlock = 200;
+        consensus.nMasternodePaymentsStartBlock = 3600; // ~5 days.Not true, but it's ok as long as it's less then nMasternodePaymentsIncreaseBlock
         consensus.nMasternodePaymentsIncreaseBlock = 158000; // actual historical value
         consensus.nMasternodePaymentsIncreasePeriod = 576*30; // 17280 - actual historical value
         consensus.nInstantSendKeepLock = 24;
