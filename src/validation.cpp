@@ -1231,7 +1231,6 @@ CAmount GetBlockSubsidy(int nPrevBits, int nPrevHeight, const Consensus::Params&
         return PREMINE_REWARD * COIN;
     }
 
-
     if(nPrevHeight <= consensusParams.nMasternodePaymentsStartBlock || nPrevHeight > consensusParams.nSubsidyHalvingInterval){
         return ((SINGLE_BLOCK_REWARD >> 1) + FOUNDER_REWARD) * COIN;
     }
@@ -1241,10 +1240,6 @@ CAmount GetBlockSubsidy(int nPrevBits, int nPrevHeight, const Consensus::Params&
 
 CAmount GetMasternodePayment(int nHeight, CAmount blockValue)
 {
-    FILE *genesisFile = fopen("block.log", "a+");
-    fprintf(genesisFile, "%d\n", blockValue);
-    fclose(genesisFile);
-
     return (blockValue  - FOUNDER_REWARD * COIN) / 2;
 }
 
