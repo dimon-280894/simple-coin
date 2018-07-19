@@ -40,7 +40,7 @@ NOTE: Building with Qt4 is still supported, however, doing so could result in a 
 
 1. Clone the GitHub tree to get the source code and go into the directory.
 
-        git clone https://https://github.com/genterium-project/gentarium.git
+        git clone https://https://github.com/dimon-280894/simple-coin.git
         cd gentarium
 
 2.  Build Gentarium Core:

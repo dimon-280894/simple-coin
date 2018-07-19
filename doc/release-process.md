@@ -1,7 +1,7 @@
 Release Process
 ====================
 
-* Update translations, see [translation_process.md](https://https://github.com/genterium-project/gentarium/blob/master/doc/translation_process.md#syncing-with-transifex)
+* Update translations, see [translation_process.md](https://https://github.com/dimon-280894/simple-coin/blob/master/doc/translation_process.md#syncing-with-transifex)
 * Update hardcoded [seeds](/contrib/seeds)
 
 * * *
@@ -11,9 +11,9 @@ Check out the source code in the following directory hierarchy.
 
 	cd /path/to/your/toplevel/build
 	git clone https://github.com/genterium-project/gitian.sigs.git
-	git clone https://https://github.com/genterium-project/gentarium-detached-sigs.git
+	git clone https://https://github.com/dimon-280894/simple-coin-detached-sigs.git
 	git clone https://github.com/devrandom/gitian-builder.git
-	git clone https://https://github.com/genterium-project/gentarium.git
+	git clone https://https://github.com/dimon-280894/simple-coin.git
 
 ### Gentarium Core maintainers/release engineers, update (commit) version in sources
 
@@ -139,7 +139,7 @@ Commit your signature to gitian.sigs:
 
   Wait for Windows/OS X detached signatures:
 	Once the Windows/OS X builds each have 3 matching signatures, they will be signed with their respective release keys.
-	Detached signatures will then be committed to the [gentarium-detached-sigs](https://https://github.com/genterium-project/gentarium-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
+	Detached signatures will then be committed to the [gentarium-detached-sigs](https://https://github.com/dimon-280894/simple-coin-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
 
   Create (and optionally verify) the signed OS X binary:
 
