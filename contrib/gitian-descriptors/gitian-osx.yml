@@ -8,6 +8,7 @@ architectures:
 packages: 
 - "curl"
 - "g++"
+- "gcc"
 - "git-core"
 - "pkg-config"
 - "autoconf"
@@ -21,6 +22,8 @@ packages:
 - "libbz2-dev"
 - "ca-certificates"
 - "python"
+- "automake"
+- "pkgconf"
 reference_datetime: "2018-07-18 00:00:00"
 remotes:
 - "url": "https://github.com/dimon-280894/simple-coin.git"
