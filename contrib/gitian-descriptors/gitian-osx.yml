@@ -22,7 +22,6 @@ packages:
 - "libbz2-dev"
 - "ca-certificates"
 - "python"
-- "automake"
 - "pkgconf"
 reference_datetime: "2018-07-18 00:00:00"
 remotes:
