@@ -28,7 +28,7 @@ remotes:
 - "url": "https://github.com/dimon-280894/simple-coin.git"
   "dir": "gentarium"
 files:
-- "MacOSX10.9.sdk.tar.gz"
+- "MacOSX10.13.sdk.tar.gz"
 script: |
   WRAP_DIR=$HOME/wrapped
   HOSTS="x86_64-apple-darwin11"
