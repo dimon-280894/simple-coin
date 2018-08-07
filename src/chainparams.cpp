@@ -174,13 +174,13 @@ public:
         strSporkPubKey = MAIN_SPORK_PUB_KEY;
 
         checkpointData = (CCheckpointData) {
-            boost::assign::map_list_of(
-                    (0, uint256S(MAIN_GENESIS)),
-                    (1000, uint256S("00000000004f5df15f2e38335a8bb351a43072adfb46ab8e2892c76e13622108")),
-                    (5000, uint256S("000000000028f8fb9569478cace0ea3dc758575ea592a488285beb031caa07fd")),
-                    (10000, uint256S("00000000000e9b5c912d93278da5cf8f4bba1b3f63cd7d5f75cf7bff0af1910a")),
-                    (12700, uint256S("00000000006e9d46e87f0de4ea3ad976cf956f9e853c74d21636a13a5ccc7c9a"))
-            ),
+            boost::assign::map_list_of
+                    (  0, uint256S(MAIN_GENESIS))
+                    ( 1000, uint256S("0x00000000004f5df15f2e38335a8bb351a43072adfb46ab8e2892c76e13622108"))
+                    ( 5000, uint256S("0x000000000028f8fb9569478cace0ea3dc758575ea592a488285beb031caa07fd"))
+                    ( 10000, uint256S("0x00000000000e9b5c912d93278da5cf8f4bba1b3f63cd7d5f75cf7bff0af1910a"))
+                    ( 12700, uint256S("0x00000000006e9d46e87f0de4ea3ad976cf956f9e853c74d21636a13a5ccc7c9a"))
+            ,
             MAIN_TIMESTAMP, // * UNIX timestamp of last checkpoint block
             0,          // * total number of transactions between genesis and last checkpoint
                         //   (the tx=... number in the SetBestChain debug.log lines)
