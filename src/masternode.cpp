@@ -1,4 +1,5 @@
 // Copyright (c) 2014-2017 The Dаsh Core developers
+//
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -116,7 +117,15 @@ CMasternode::CollateralStatus CMasternode::CheckCollateral(const COutPoint& outp
         return COLLATERAL_UTXO_NOT_FOUND;
     }
 
-    if(coin.out.nValue != 1000 * COIN) {
+    if(coin.nHeight <= 300 && coin.out.nValue != 1000 * COIN){
+        return COLLATERAL_INVALID_AMOUNT;
+    }
+
+    if(coin.nHeight > 300 && coin.nHeight <= 600 && coin.out.nValue != 2000 * COIN){
+        return COLLATERAL_INVALID_AMOUNT;
+    }
+
+    if(coin.nHeight > 1000 && coin.out.nValue != 5000 * COIN) {
         return COLLATERAL_INVALID_AMOUNT;
     }
 
