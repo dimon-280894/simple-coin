@@ -132,7 +132,7 @@ public:
         pchMessageStart[2] = 0x74;
         pchMessageStart[3] = 0x6d;
         vAlertPubKey = ParseHex(MAIN_ALERT_PUB_KEY);
-        nDefaultPort = 17017;
+        nDefaultPort = 27017;
         nMaxTipAge = 6 * 60 * 60; // ~144 blocks behind -> 2 x fork detection time, was 24 * 60 * 60 in bitcoin
         nDelayGetHeadersTime = 24 * 60 * 60;
         nPruneAfterHeight = 100000;
@@ -143,8 +143,8 @@ public:
         assert(genesis.hashMerkleRoot == uint256S(HASH_MERKLE_ROOT));
 
         vSeeds.clear();
-        vSeeds.push_back(CDNSSeedData("dnsseed1.gtmcoin.io", "dnsseed1.gtmcoin.io"));
-        vSeeds.push_back(CDNSSeedData("dnsseed2.gtmcoin.io", "dnsseed2.gtmcoin.io"));
+//        vSeeds.push_back(CDNSSeedData("dnsseed1.gtmcoin.io", "dnsseed1.gtmcoin.io"));
+//        vSeeds.push_back(CDNSSeedData("dnsseed2.gtmcoin.io", "dnsseed2.gtmcoin.io"));
 
         // Gentarium addresses start with 'G'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,38);
@@ -161,7 +161,7 @@ public:
         nExtCoinType = 5;
 
         vFixedSeeds.clear();
-        vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_main, pnSeed6_main + ARRAYLEN(pnSeed6_main));
+//        vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_main, pnSeed6_main + ARRAYLEN(pnSeed6_main));
 
         fMiningRequiresPeers = true;
         fDefaultConsistencyChecks = false;
@@ -249,7 +249,7 @@ public:
         pchMessageStart[2] = 0x74;
         pchMessageStart[3] = 0x6d;
         vAlertPubKey = ParseHex(TEST_ALERT_PUB_KEY);
-        nDefaultPort = 18018;
+        nDefaultPort = 28018;
         nMaxTipAge = 0x7fffffff; // allow mining on top of old blocks for testnet
         nDelayGetHeadersTime = 24 * 60 * 60;
         nPruneAfterHeight = 1000;
@@ -360,7 +360,7 @@ public:
         pchMessageStart[3] = 0x6d;
         nMaxTipAge = 6 * 60 * 60; // ~144 blocks behind -> 2 x fork detection time, was 24 * 60 * 60 in bitcoin
         nDelayGetHeadersTime = 0; // never delay GETHEADERS in regtests
-        nDefaultPort = 19019;
+        nDefaultPort = 29019;
         nPruneAfterHeight = 1000;
 
         genesis = CreateGenesisBlock(REGTEST_TIMESTAMP, REGTEST_NONCE, REGTEST_BITS, REGTEST_VERSION, SINGLE_BLOCK_REWARD * COIN);
