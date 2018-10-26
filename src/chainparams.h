@@ -20,6 +20,8 @@
 ///////////////////////////
 
 static const int64_t SINGLE_BLOCK_REWARD = 21;
+static const int64_t DECREASE_BLOCK_REWARD = 13;
+static const int64_t DECREASE_BLOCK = 1100;
 static const int64_t PREMINE_REWARD = 40000;
 static const int64_t FOUNDER_REWARD = 1;
 static const char* PSZ_TIMESTAMP = "This is test!asdasdadasmdajsdajkdshkjadshkjhakd";

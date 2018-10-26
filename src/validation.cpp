@@ -1227,15 +1227,17 @@ double ConvertBitsToDouble(unsigned int nBits)
 
 CAmount GetBlockSubsidy(int nPrevBits, int nPrevHeight, const Consensus::Params& consensusParams, bool fSuperblockPartOnly)
 {
+    int64_t blockReward = nPrevHeight >= DECREASE_BLOCK ? DECREASE_BLOCK_REWARD : SINGLE_BLOCK_REWARD;
+
     if(nPrevHeight < 1){
         return PREMINE_REWARD * COIN;
     }
 
     if(nPrevHeight <= consensusParams.nMasternodePaymentsStartBlock || nPrevHeight > consensusParams.nSubsidyHalvingInterval){
-        return ((SINGLE_BLOCK_REWARD >> 1) + FOUNDER_REWARD) * COIN;
+        return ((blockReward >> 1) + FOUNDER_REWARD) * COIN;
     }
 
-    return  (SINGLE_BLOCK_REWARD * COIN);
+    return  (blockReward * COIN);
 }
 
 CAmount GetMasternodePayment(int nHeight, CAmount blockValue)
