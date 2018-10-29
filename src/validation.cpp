@@ -1242,7 +1242,12 @@ CAmount GetBlockSubsidy(int nPrevBits, int nPrevHeight, const Consensus::Params&
 
 CAmount GetMasternodePayment(int nHeight, CAmount blockValue)
 {
-    return (blockValue  - FOUNDER_REWARD * COIN) / 2;
+    if(nHeight < DECREASE_BLOCK) {
+        return (blockValue - FOUNDER_REWARD * COIN) / 2;
+    }
+    else{
+        return blockValue - ((blockValue - FOUNDER_REWARD * COIN) / 6);
+    }
 }
 
 CAmount GetFounderPayment(int nHeight){

@@ -117,7 +117,13 @@ CMasternode::CollateralStatus CMasternode::CheckCollateral(const COutPoint& outp
         return COLLATERAL_UTXO_NOT_FOUND;
     }
 
-    if(coin.out.nValue != 1000 * COIN) {
+    int collateral =  MASTERNODE_DEFAULT_COLLETERAL;
+
+    if(nHeight > CHANGE_COLLETERAL_BLOCK_START) {
+        collateral += 0.1 * ((nHeight - CHANGE_COLLETERAL_BLOCK_START) / CHANGE_COLLETERAL_PERIOD + 1) * MASTERNODE_DEFAULT_COLLETERAL;
+    }
+
+    if (coin.out.nValue != collateral * COIN) {
         return COLLATERAL_INVALID_AMOUNT;
     }
 
