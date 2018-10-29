@@ -22,9 +22,10 @@ static const int MASTERNODE_NEW_START_REQUIRED_SECONDS  = 180 * 60;
 
 static const int MASTERNODE_POSE_BAN_MAX_SCORE          = 5;
 
-static const int MASTERNODE_DEFAULT_COLLETERAL          = 1000;
-static const int CHANGE_COLLETERAL_BLOCK_START          = 600;
-static const int CHANGE_COLLETERAL_PERIOD               = 200;
+static const int MASTERNODE_DEFAULT_COLLETERAL                      = 1000;
+static const int MASTERNODE_CHANGE_COLLATERAL_BLOCK_START           = 600;
+static const int MASTERNODE_CHANGE_COLLATERAL_PERIOD                 = 200;
+static const float MASTERNODE_CHANGE_COLLATERAL_PERCENT             = 0.1;
 
 //
 // The Masternode Ping Class : Contains a different serialize method for sending pings from masternodes throughout the network

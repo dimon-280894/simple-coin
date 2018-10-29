@@ -119,8 +119,8 @@ CMasternode::CollateralStatus CMasternode::CheckCollateral(const COutPoint& outp
 
     int collateral =  MASTERNODE_DEFAULT_COLLETERAL;
 
-    if(nHeight > CHANGE_COLLETERAL_BLOCK_START) {
-        collateral += 0.1 * ((nHeight - CHANGE_COLLETERAL_BLOCK_START) / CHANGE_COLLETERAL_PERIOD + 1) * MASTERNODE_DEFAULT_COLLETERAL;
+    if(coin.nHeight > MASTERNODE_CHANGE_COLLATERAL_BLOCK_START) {
+        collateral += (int)(MASTERNODE_CHANGE_COLLATERAL_PERCENT * ((coin.nHeight - MASTERNODE_CHANGE_COLLATERAL_BLOCK_START) / MASTERNODE_CHANGE_COLLATERAL_PERIOD + 1) * MASTERNODE_DEFAULT_COLLETERAL);
     }
 
     if (coin.out.nValue != collateral * COIN) {
