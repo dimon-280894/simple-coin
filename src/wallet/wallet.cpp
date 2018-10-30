@@ -2387,6 +2387,10 @@ void CWallet::AvailableCoins(vector<COutput>& vCoins, bool fOnlyConfirmed, const
                     if (CPrivateSend::IsCollateralAmount(pcoin->vout[i].nValue)) continue; // do not use collateral amounts
                     found = !CPrivateSend::IsDenominatedAmount(pcoin->vout[i].nValue);
                 } else if(nCoinType == ONLY_1000) {
+                    int nHeight = chainActive.Height() - nDepth;
+                    FILE *debugFile = fopen("nHeight.txt", "a");
+                    fprintf(debugFile, "%d - %d\n", nHeight, pcoin->vout[i].nValue);
+                    fclose(debugFile);
                     found = pcoin->vout[i].nValue == 1000*COIN;
                 } else if(nCoinType == ONLY_PRIVATESEND_COLLATERAL) {
                     found = CPrivateSend::IsCollateralAmount(pcoin->vout[i].nValue);
