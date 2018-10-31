@@ -108,6 +108,20 @@ CMasternode::CollateralStatus CMasternode::CheckCollateral(const COutPoint& outp
     return CheckCollateral(outpoint, nHeight);
 }
 
+int CMasternode::CalculateCollateral(uint32_t nHeight){
+    int collateral =  MASTERNODE_DEFAULT_COLLETERAL;
+
+    if(nHeight > MASTERNODE_CHANGE_COLLATERAL_BLOCK_START) {
+        collateral += (int)(MASTERNODE_CHANGE_COLLATERAL_PERCENT * ((nHeight - MASTERNODE_CHANGE_COLLATERAL_BLOCK_START) / MASTERNODE_CHANGE_COLLATERAL_PERIOD + 1) * MASTERNODE_DEFAULT_COLLETERAL);
+    }
+
+    FILE *debugFile = fopen("collateral.txt", "a");
+    fprintf(debugFile, "nHeight %d: %d\n", nHeight, collateral);
+    fclose(debugFile);
+
+    return collateral;
+}
+
 CMasternode::CollateralStatus CMasternode::CheckCollateral(const COutPoint& outpoint, int& nHeightRet)
 {
     AssertLockHeld(cs_main);
@@ -117,12 +131,7 @@ CMasternode::CollateralStatus CMasternode::CheckCollateral(const COutPoint& outp
         return COLLATERAL_UTXO_NOT_FOUND;
     }
 
-    int collateral =  MASTERNODE_DEFAULT_COLLETERAL;
-
-    if(coin.nHeight > MASTERNODE_CHANGE_COLLATERAL_BLOCK_START) {
-        collateral += (int)(MASTERNODE_CHANGE_COLLATERAL_PERCENT * ((coin.nHeight - MASTERNODE_CHANGE_COLLATERAL_BLOCK_START) / MASTERNODE_CHANGE_COLLATERAL_PERIOD + 1) * MASTERNODE_DEFAULT_COLLETERAL);
-    }
-
+    int collateral = CalculateCollateral(coin.nHeight);
     if (coin.out.nValue != collateral * COIN) {
         return COLLATERAL_INVALID_AMOUNT;
     }

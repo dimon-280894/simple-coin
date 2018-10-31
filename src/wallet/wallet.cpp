@@ -25,6 +25,7 @@
 #include "txmempool.h"
 #include "util.h"
 #include "utilmoneystr.h"
+#include "masternode.h"
 
 #include "governance.h"
 #include "instantx.h"
@@ -2391,7 +2392,7 @@ void CWallet::AvailableCoins(vector<COutput>& vCoins, bool fOnlyConfirmed, const
                     FILE *debugFile = fopen("nHeight.txt", "a");
                     fprintf(debugFile, "%d - %d\n", nHeight, pcoin->vout[i].nValue);
                     fclose(debugFile);
-                    found = pcoin->vout[i].nValue == 1000*COIN;
+                    found = pcoin->vout[i].nValue == CMasternode::CalculateCollateral(nHeight)*COIN;
                 } else if(nCoinType == ONLY_PRIVATESEND_COLLATERAL) {
                     found = CPrivateSend::IsCollateralAmount(pcoin->vout[i].nValue);
                 } else {
