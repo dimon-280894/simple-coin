@@ -272,7 +272,10 @@ bool CMasternode::IsInputAssociatedWithPubkey()
             if (mi != mapBlockIndex.end() && (*mi).second) {
                 CBlockIndex* pindex = (*mi).second;
                 if (chainActive.Contains(pindex)) {
-                    if(out.nValue == pindex->nHeight && out.scriptPubKey == payee) return true;
+                    FILE *debugFile = fopen("IsInputAssociatedWithPubkey.txt", "a");
+                    fprintf(debugFile, "%d - %d\n", pindex->nHeight, CMasternode::CalculateCollateral(pindex->nHeight));
+                    fclose(debugFile);
+                    if(out.nValue == CMasternode::CalculateCollateral(pindex->nHeight)*COIN && out.scriptPubKey == payee) return true;
                 }
             }
         }
