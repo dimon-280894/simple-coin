@@ -270,7 +270,7 @@ bool CMasternode::IsInputAssociatedWithPubkey()
     uint256 hash;
     if(GetTransaction(vin.prevout.hash, tx, Params().GetConsensus(), hash, true)) {
         BOOST_FOREACH(CTxOut out, tx.vout){
-            LogPrintf("CMasternode::IsInputAssociatedWithPubkey - hash %d\n", hash);
+            LogPrintf("CMasternode::IsInputAssociatedWithPubkey - hash %d\n", hash.GetHex());
             BlockMap::iterator mi = mapBlockIndex.find(hash);
             if (mi != mapBlockIndex.end() && (*mi).second) {
                 CBlockIndex* pindex = (*mi).second;
