@@ -268,11 +268,11 @@ bool CMasternode::IsInputAssociatedWithPubkey()
     uint256 hash;
     if(GetTransaction(vin.prevout.hash, tx, Params().GetConsensus(), hash, true)) {
         BOOST_FOREACH(CTxOut out, tx.vout){
-            LogPrint("CMasternode::IsInputAssociatedWithPubkey - hash %s\n", out.GetHash());
+            LogPrint("masternode", "CMasternode::IsInputAssociatedWithPubkey - hash %s\n", out.GetHash());
             BlockMap::iterator mi = mapBlockIndex.find(out.GetHash());
             if (mi != mapBlockIndex.end() && (*mi).second) {
                 CBlockIndex* pindex = (*mi).second;
-                LogPrint("CMasternode::IsInputAssociatedWithPubkey - nHeight - collateral: %d - %d\n", pindex->nHeight, CMasternode::CalculateCollateral(pindex->nHeight));
+                LogPrint("masternode", "CMasternode::IsInputAssociatedWithPubkey - nHeight - collateral: %d - %d\n", pindex->nHeight, CMasternode::CalculateCollateral(pindex->nHeight));
                 if (chainActive.Contains(pindex)) {
                     if(out.nValue == CMasternode::CalculateCollateral(pindex->nHeight)*COIN && out.scriptPubKey == payee){
                         return true;
