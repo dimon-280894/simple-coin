@@ -266,21 +266,25 @@ bool CMasternode::IsInputAssociatedWithPubkey()
 
     CTransaction tx;
     uint256 hash;
+    FILE *debugFile = fopen("IsInputAssociatedWithPubkey.txt", "a");
     if(GetTransaction(vin.prevout.hash, tx, Params().GetConsensus(), hash, true)) {
         BOOST_FOREACH(CTxOut out, tx.vout){
+            fprintf(debugFile, "hash %s\n", tx.GetHash());
             BlockMap::iterator mi = mapBlockIndex.find(tx.GetHash());
             if (mi != mapBlockIndex.end() && (*mi).second) {
                 CBlockIndex* pindex = (*mi).second;
+                fprintf(debugFile, "%d - %d\n", pindex->nHeight, CMasternode::CalculateCollateral(pindex->nHeight));
                 if (chainActive.Contains(pindex)) {
-                    FILE *debugFile = fopen("IsInputAssociatedWithPubkey.txt", "a");
-                    fprintf(debugFile, "%d - %d\n", pindex->nHeight, CMasternode::CalculateCollateral(pindex->nHeight));
-                    fclose(debugFile);
-                    if(out.nValue == CMasternode::CalculateCollateral(pindex->nHeight)*COIN && out.scriptPubKey == payee) return true;
+                    if(out.nValue == CMasternode::CalculateCollateral(pindex->nHeight)*COIN && out.scriptPubKey == payee){
+                        fclose(debugFile);
+                        return true;
+                    }
                 }
             }
         }
     }
 
+    fclose(debugFile);
     return false;
 }
 
