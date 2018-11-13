@@ -1071,7 +1071,7 @@ bool GetAddressIndex(uint160 addressHash, int type,
     return true;
 }
 
-bool GetAddressUnspent(uint160 addressHash, int type,
+bool GetAddressUnspent(uint160 addressHash, int type,ыг
                        std::vector<std::pair<CAddressUnspentKey, CAddressUnspentValue> > &unspentOutputs)
 {
     if (!fAddressIndex)
@@ -1231,16 +1231,26 @@ CAmount GetBlockSubsidy(int nPrevBits, int nPrevHeight, const Consensus::Params&
         return PREMINE_REWARD * COIN;
     }
 
+    int64_t blockReward = nPrevHeight >= DECREASE_BLOCK ? DECREASE_BLOCK_REWARD : SINGLE_BLOCK_REWARD;
+
     if(nPrevHeight <= consensusParams.nMasternodePaymentsStartBlock || nPrevHeight > consensusParams.nSubsidyHalvingInterval){
-        return ((SINGLE_BLOCK_REWARD >> 1) + FOUNDER_REWARD) * COIN;
+        return ((blockReward >> 1) + FOUNDER_REWARD) * COIN;
     }
 
-    return  (SINGLE_BLOCK_REWARD * COIN);
+    LogPrintf("Validation::GetBlockSubsidy - %d reward for block #%d", blockReward, nPrevHeight + 1);
+
+    return  (blockReward * COIN);
 }
 
 CAmount GetMasternodePayment(int nHeight, CAmount blockValue)
 {
-    return (blockValue  - FOUNDER_REWARD * COIN) / 2;
+    CAmount reward = (blockValue - FOUNDER_REWARD * COIN) / 2;
+    if(nHeight >= DECREASE_BLOCK) {
+        reward = blockValue - ((blockValue - FOUNDER_REWARD * COIN) / 6);
+    }
+
+    LogPrintf("Validation::GetMasternodePayment - masternodes reward is for block #%d[%d]", reward, nHeight, blockValue);
+    return reward;
 }
 
 CAmount GetFounderPayment(int nHeight){
