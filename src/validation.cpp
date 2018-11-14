@@ -1249,7 +1249,7 @@ CAmount GetMasternodePayment(int nHeight, CAmount blockValue)
         reward = blockValue - ((blockValue - FOUNDER_REWARD * COIN) / 6);
     }
 
-    LogPrintf("Validation::GetMasternodePayment - masternodes reward is for block #%d[%d]", reward, nHeight, blockValue);
+    LogPrintf("Validation::GetMasternodePayment - masternodes reward is %d for block #%d[%d]", reward, nHeight, blockValue);
     return reward;
 }
 
