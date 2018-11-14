@@ -1237,7 +1237,7 @@ CAmount GetBlockSubsidy(int nPrevBits, int nPrevHeight, const Consensus::Params&
         return ((blockReward >> 1) + FOUNDER_REWARD) * COIN;
     }
 
-    LogPrintf("Validation::GetBlockSubsidy - %d reward for block #%d", blockReward, nPrevHeight + 1);
+    LogPrintf("Validation::GetBlockSubsidy - %d reward for block #%d\n", blockReward, nPrevHeight + 1);
 
     return  (blockReward * COIN);
 }
@@ -1249,7 +1249,7 @@ CAmount GetMasternodePayment(int nHeight, CAmount blockValue)
         reward = blockValue - ((blockValue - FOUNDER_REWARD * COIN) / 6);
     }
 
-    LogPrintf("Validation::GetMasternodePayment - masternodes reward is %d for block #%d[%d]", reward, nHeight, blockValue);
+    LogPrintf("Validation::GetMasternodePayment - masternodes reward is %d for block #%d[%d]\n", reward, nHeight, blockValue);
     return reward;
 }
 
