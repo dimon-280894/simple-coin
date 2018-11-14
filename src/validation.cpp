@@ -1246,7 +1246,7 @@ CAmount GetMasternodePayment(int nHeight, CAmount blockValue)
 {
     CAmount reward = (blockValue - FOUNDER_REWARD * COIN) / 2;
     if(nHeight >= DECREASE_BLOCK) {
-        reward = blockValue - ((blockValue - FOUNDER_REWARD * COIN) / 6);
+        reward = blockValue - ((blockValue - FOUNDER_REWARD * COIN) / 6) - FOUNDER_REWARD * COIN;
     }
 
     LogPrintf("Validation::GetMasternodePayment - masternodes reward is %d for block #%d[%d]\n", reward, nHeight, blockValue);
