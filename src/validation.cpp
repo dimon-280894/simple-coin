@@ -1231,7 +1231,7 @@ CAmount GetBlockSubsidy(int nPrevBits, int nPrevHeight, const Consensus::Params&
         return PREMINE_REWARD * COIN;
     }
 
-    int64_t blockReward = nPrevHeight > DECREASE_BLOCK ? DECREASE_BLOCK_REWARD : SINGLE_BLOCK_REWARD;
+    int64_t blockReward = nPrevHeight >= DECREASE_BLOCK ? DECREASE_BLOCK_REWARD : SINGLE_BLOCK_REWARD;
 
     if(nPrevHeight <= consensusParams.nMasternodePaymentsStartBlock || nPrevHeight > consensusParams.nSubsidyHalvingInterval){
         return ((blockReward >> 1) + FOUNDER_REWARD) * COIN;
@@ -1245,7 +1245,7 @@ CAmount GetBlockSubsidy(int nPrevBits, int nPrevHeight, const Consensus::Params&
 CAmount GetMasternodePayment(int nHeight, CAmount blockValue)
 {
     CAmount reward = (blockValue - FOUNDER_REWARD * COIN) / 2;
-    if(nHeight >= DECREASE_BLOCK) {
+    if(nHeight > DECREASE_BLOCK) {
         reward = blockValue - ((blockValue - FOUNDER_REWARD * COIN) / 6) - FOUNDER_REWARD * COIN;
     }
 
